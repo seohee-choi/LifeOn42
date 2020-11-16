@@ -1,0 +1,88 @@
+@import "../reset.css";
+
+html,
+body {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around; */
+  border: 3px dotted black;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+}
+
+.status-bar {
+  /* width: 99.8%; */
+  width: 100%;
+  height: 5px;
+  border: 2px solid blue;
+  background-color: blue;
+}
+
+/* main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.survey-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 80%;
+  /* margin-top: 30px; */
+  border: 5px solid orange;
+}
+
+.question {
+  width: 90%;
+  height: 50px;
+  margin-top: 10px;
+  border: 1px solid green;
+  background-color: green;
+}
+
+.responses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 500px;
+  /* margin-top: 30px; */
+  border: 2px solid purple;
+}
+
+.choose {
+  width: 97%;
+  height: 30px;
+  margin-top: 10px;
+  border: 1px solid brown;
+  background-color: brown;
+}
+
+nav {
+  display: flex;
+  align-items: space-around;
+  width: auto;
+  height: 10%;
+  background-color: gray;
+}
+
+.btn {
+  width: 90%;
+  height: 30px;
+  margin: 20px;
+  border: 2px solid black;
+  background-color: pink;
+}

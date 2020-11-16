@@ -1,38 +1,37 @@
 @import "reset.css";
 
 .main {
-    display:flex;
-    /* justify-content:space-between; */
-    flex-direction: column;
-    align-items: center;
-    background-color:black ;
+  display: flex;
+  /* justify-content:space-between; */
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
 }
 
 .title {
-    display:flex;
-    margin-top: 20%;
-    justify-content:center;
-    align-items:center;
-    width:1000px;
-    height:300px;
-    font-weight: 900;
-    /* background-color: blue; */
-    font-size: 80px;
-    color:white;
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 300px;
+  font-weight: 900;
+  /* background-color: blue; */
+  font-size: 80px;
+  color: white;
 }
 
-
 .button {
-    display:flex;
-    margin-top: 15%;
-    justify-content: center;
-    align-items:center;
-    width:400px;
-    height:100px;
-    font-weight: 900;
-    border-radius: 20px;
-    background-color: blue;
-    font-size: 38px;
-    cursor: pointer;
-    color:white;
+  display: flex;
+  margin-bottom: 7%;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  font-weight: 900;
+  border-radius: 20px;
+  background-color: blue;
+  font-size: 38px;
+  cursor: pointer;
+  color: white;
 }
