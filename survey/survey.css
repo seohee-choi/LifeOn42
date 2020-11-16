@@ -1,0 +1,63 @@
+@import "../reset.css";
+
+/* .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.status-bar {
+  /* width: 99.8%; */
+  width: auto;
+  height: 50px;
+  border: 2px solid blue;
+  background-color: blue;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.survey-box {
+  width: auto;
+  height: 400px;
+  /* margin-top: 30px; */
+  border: 2px solid orange;
+}
+
+.question {
+  width: auto;
+  height: 50px;
+  margin-top: 10px;
+  border: 1px solid green;
+  background-color: green;
+}
+
+.responses {
+  width: auto;
+  height: 180px;
+  /* margin-top: 30px; */
+  border: 1px solid purple;
+}
+
+.choose {
+  width: auto;
+  height: 30px;
+  margin-top: 10px;
+  border: 1px solid brown;
+  background-color: brown;
+}
+
+.nav {
+  display: flex;
+  align-items: space-around;
+}
+
+.btn {
+  width: auto;
+  height: 30px;
+  /* margin-top: 30px; */
+  border: 2px solid pink;
+}
