@@ -1,0 +1,41 @@
+@import "../reset.css";
+
+html,
+body {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around; */
+  /* border: 3px dotted black; */
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 5% 0; */
+  width: auto;
+  height: auto;
+  border: 2px solid red;
+}
+
+.title {
+  margin: 30px;
+  font-size: 20pt;
+}
+
+.character {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 30px;
+  background-color: pink;
+}
+
+button {
+  height: 80px;
+  width: 80px;
+}
