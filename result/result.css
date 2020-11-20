@@ -12,6 +12,21 @@ body {
   overflow: hidden;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 5%;
+}
+
+.status-bar {
+  /* width: 99.8%; */
+  width: 90%;
+  height: 5px;
+  border: 2px solid blue;
+  /* background-color: blue; */
+}
+
 .result {
   display: flex;
   flex-direction: column;
@@ -35,7 +50,22 @@ body {
   background-color: pink;
 }
 
+.snsBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  width: 500px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
 button {
-  height: 80px;
-  width: 80px;
+  width: 70px;
+  height: 50px;
+}
+
+i {
+  font-size: 30px;
+  /* border: 2px solid blueviolet; */
 }
