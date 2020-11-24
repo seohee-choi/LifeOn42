@@ -15,8 +15,8 @@ body {
 header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 10%;
+  align-items: flex-end;
+  height: 5%;
 }
 
 .status-bar {
@@ -27,22 +27,33 @@ header {
   /* background-color: blue; */
 }
 
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: auto;
+  height: 80%;
+  border: 2px solid red;
+}
+
 /* main {
   display: flex;
   justify-content: center;
   align-items: center;
 } */
 
-.survey-box {
+/* .survey-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 90%;
   height: 80%;
   /* margin-top: 30px; */
-  /* border: 5px solid orange; */
-}
+/* border: 5px solid orange; 
+} */
 
 .question {
   width: 90%;
@@ -74,16 +85,22 @@ header {
 
 nav {
   display: flex;
-  align-items: space-around;
-  width: auto;
+  align-items: center;
+  width: 100%;
   height: 10%;
-  /* background-color: gray; */
+
+  position: absolute;
+  bottom: 0px;
+  /* position: fixed; */
+  background-color: gray;
 }
 
 button {
-  width: 90%;
-  height: 40px;
-  margin: 10px 180px 20px 180px;
+  position: relative;
+
+  width: 30%;
+  height: 50px;
+  margin: 20px 180px;
   border: 2px solid black;
   /* background-color: pink; */
 }
