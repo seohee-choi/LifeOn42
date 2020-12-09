@@ -85,22 +85,23 @@ header {
 
 nav {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+
+  align-items: flex-start;
+
   width: 100%;
   height: 10%;
 
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   /* position: fixed; */
   background-color: gray;
 }
 
 button {
-  position: relative;
-
-  width: 30%;
+  width: 35%;
   height: 50px;
-  margin: 20px 180px;
+  /* margin: 5% 10%; */
   border: 2px solid black;
   /* background-color: pink; */
 }
