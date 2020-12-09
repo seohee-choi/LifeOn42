@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
-    />
+    /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
     <title>LifeOn42</title>
@@ -15,11 +15,17 @@
   <body class="main">
     <div class="midBox">
     <div class="title">LifeOn42</div>
-    <input type="text" class="js-user user" placeholder="what's your name?"></input>
-    <a href="survey/survey.html">
-      <button onclick="location.href='survey/survey.html'">START</button>
+    <form class="js-user">
+      <input type="text" class="js-id user" placeholder="what's your name?"></input>
+     </form>
+     <h3 class="alertName"></h3>
+     <br></br>
+    <!-- <a href="survey/survey.html"> -->
+      <button class="js-button">START</button>
     </a>
-    <script src="js/index.js"></script>
+    <script src="index.js"></script>
+    <script src="survey/survey.js"></script>
+    <script src="result/result.js"></script>
   </div>
   </body>
 </html>
