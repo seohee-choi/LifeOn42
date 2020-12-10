@@ -26,7 +26,7 @@ function paintQuestion(question) {
 }
 
 function selectVal(event) {
-  nextBtn.disabled = "false";
+  nextBtn.disabled = false;
   const chLen = chooseBox.length;
   if (event.target.classList[1] === "clicked") {
     event.target.classList.remove("clicked");
@@ -46,26 +46,31 @@ function paintAnswer(answer) {
   }
 }
 
+function endQna() {
+
+}
+
 function handleQna(qArr, aArr) {
   if (idx === lstLen) endQna();
   else {
     paintQuestion(qArr[idx]);
     paintAnswer(aArr[idx]);
-    statusBar.value = JSON.stringify(idx);
+    statusBar.value = JSON.stringify(idx + 1);
     idx++;
   }
 }
 
-function handleNext() {
-  // - 선택 x >> next 못누름
-  // - 선택 o >> next 눌리고 답변값 저장하는 함수 호출
-  for (let i = 0; i < chLen; i++) {
-    if (chooseBox[i].classList === "clicked") {
+function handleNext(event) {
+  event.preventDefault();
+  for (let i = 0; i < chooseBox.length; i++) {
+    if (chooseBox[i].classList[1] === "clicked") {
+      chooseBox[i].classList.remove("clicked");
       userVal.push(i);
       break;
     }
   }
-  nextBtn.disabled = "disabled";
+  console.log(userVal);
+  nextBtn.disabled = true;
   handleQna(qArr, aArr);
 }
 
@@ -73,7 +78,5 @@ function init() {
   handleQna(qArr, aArr);
   nextBtn.addEventListener("click", handleNext);
 }
-//start btn누를 때만 실행
-//start btn을 누르지 않고 survey.html에 접근하면 어떻게 될까?
 
 init();

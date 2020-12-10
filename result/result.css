@@ -19,13 +19,11 @@ header {
   height: 5%;
 }
 
-.status-bar {
-  /* width: 99.8%; */
+/* .status-bar {
   width: 90%;
   height: 5px;
   border: 2px solid blue;
-  /* background-color: blue; */
-}
+} */
 
 .result {
   display: flex;
