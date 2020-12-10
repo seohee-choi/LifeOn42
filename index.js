@@ -11,9 +11,7 @@ function qnaStart() {
   if (userName < 1) {
     alertName.innerText = "Write your name ☝";
   }
-  console.log(userName);
-  surveyInit();
-  // location.href='survey/survey.html'
+else loadQna();
 }
 
 function init() {
