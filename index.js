@@ -10,13 +10,14 @@ function qnaStart() {
   const alertName = document.querySelector(".alertName");
   if (userName < 1) {
     alertName.innerText = "Write your name ☝";
-  }
-else loadQna();
+  } else location.href = "survey/survey.html";
 }
 
 function init() {
   startBtn.onclick = qnaStart;
-  userForm.addEventListener("submit", (e) => {e.preventDefault();})
+  userForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
 }
 
 init();
