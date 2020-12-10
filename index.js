@@ -16,6 +16,7 @@ else loadQna();
 
 function init() {
   startBtn.onclick = qnaStart;
+  userForm.addEventListener("submit", (e) => {e.preventDefault();})
 }
 
 init();
