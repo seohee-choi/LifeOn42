@@ -43,9 +43,9 @@ function paintAnswer(answer) {
 }
 
 function endQna() {
-	const userName = location.href.substr(location.href.lastIndexOf('=')+1);
+  const userIdx = location.href.lastIndexOf('=')+1;
+	const userName = location.href.substr(userIdx);
 	location.href = `../result/result.html?name=${userName}`;
-
 }
 
 function handleQna(qArr, aArr) {
