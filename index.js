@@ -5,12 +5,12 @@ const startBtn = document.querySelector(".js-button");
 
 // function localName(event) {}
 
-function qnaStart() {
-  const userName = userInput.value;
+ function qnaStart() {
+	const userName = userInput.value;
   const alertName = document.querySelector(".alertName");
   if (userName < 1) {
     alertName.innerText = "Write your name ☝";
-  } else location.href = "survey/survey.html";
+  } else location.href = `survey/survey.html?name=${userName}`;
 }
 
 function init() {

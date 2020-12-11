@@ -28,14 +28,10 @@ function paintQuestion(question) {
 function selectVal(event) {
   nextBtn.disabled = false;
   const chLen = chooseBox.length;
-  if (event.target.classList[1] === "clicked") {
-    event.target.classList.remove("clicked");
-  } else {
-    for (let i = 0; i < chLen; i++) {
-      chooseBox[i].classList.remove("clicked");
-    }
-    event.target.classList.add("clicked");
+  for (let i = 0; i < chLen; i++) {
+    chooseBox[i].classList.remove("clicked");
   }
+  event.target.classList.add("clicked");
 }
 
 function paintAnswer(answer) {
@@ -47,6 +43,8 @@ function paintAnswer(answer) {
 }
 
 function endQna() {
+	const userName = location.href.substr(location.href.lastIndexOf('=')+1);
+	location.href = `../result/result.html?name=${userName}`;
 
 }
 
@@ -65,7 +63,7 @@ function handleNext(event) {
   for (let i = 0; i < chooseBox.length; i++) {
     if (chooseBox[i].classList[1] === "clicked") {
       chooseBox[i].classList.remove("clicked");
-      userVal.push(i);
+      userVal.push(i + 1);
       break;
     }
   }
@@ -79,4 +77,12 @@ function init() {
   nextBtn.addEventListener("click", handleNext);
 }
 
-init();
+document.addEventListener("DOMContentLoaded", () =>{
+	console.log("로딩중~~")
+    window.onload = () => {
+	console.log("로딩완료~~")
+
+        init();
+      };
+	}
+	);
