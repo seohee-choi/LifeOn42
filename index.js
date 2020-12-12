@@ -1,9 +1,6 @@
 const userForm = document.querySelector(".js-user");
 const userInput = document.querySelector(".js-id");
 const startBtn = document.querySelector(".js-button");
-// console.log(userInput.value);
-
-// function localName(event) {}
 
  function qnaStart() {
 	const userName = userInput.value;

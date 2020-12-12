@@ -1,10 +1,5 @@
-// import {userVal} from '../survey/survey.js'
-
 const canvas = document.getElementById("jsCanvas");
-
 const userImg = document.querySelector(".character");
-const kakao = document.querySelector(".jsKakao");
-const insta = document.querySelector(".jsInsta");
 const link = document.querySelector(".jsLink");
 const save = document.querySelector(".jsSave");
 
@@ -12,14 +7,6 @@ const url = "http://seohee-choi@github.io/LifeOn42";
 
 canvas.width = 500;
 canvas.height = 500;
-// function shareKakao() {
-	
-// }
-
-// function shareInsta() {
-	
-// }
-
 
 function copyLink(url) {
 	const tmp = document.createElement("textarea");
@@ -32,9 +19,9 @@ function copyLink(url) {
 }
 
 function saveImg() {
-	const img = canvas.toDataURL();
+	const pic = canvas.toDataURL();
 	const a = document.createElement("a");
-	a.href = img;
+	a.href = pic;
 	a.download = "myLifeOn42";
 	a.click();
 }
@@ -42,7 +29,6 @@ function saveImg() {
 function paintUserName(userName){	
 	const title = document.querySelector(".js-title");
 	title.innerText = `${userName}님의 LifeOn42는...`;
-	// console.log(userName);
 }
 
 function getUserName(){
@@ -53,15 +39,40 @@ function getUserName(){
 	}
 }
 
-function handleImage(){
+function getUserVal(){
 	const userVal = localStorage.getItem("valList");
-	console.log(userVal);
 	localStorage.removeItem("valList");
-	let defaultImg = new Image();
-	defaultImg.src = "../pic/default2.png";
+	return userVal;
+}
+
+function getImageURL(){
+	const userVal = JSON.parse(getUserVal());
+	const imageURLs = [];
+	let i = 0;
+	userVal.forEach(function(element) { 
+		imageURLs.push(`../pic/${i}/${element}.png`);
+		i++;
+	});
+	return imageURLs;
+}
+
+function handleImage(){
+	const imgURLs = getImageURL();
 	const context = canvas.getContext('2d');
-	defaultImg.onload = function() {
-		context.drawImage(defaultImg, 1, 1);
+	let img = new Image(); 
+
+	img.src = "../pic/default2.png";
+	img.onload = function(){
+		context.drawImage(img, 1, 1);
+	}
+	context.globalCompositeOperation="source-over";
+
+	for (let i=0; i<imgURLs.length; i++) { 
+		let img = new Image(); 
+		img.src = imgURLs[i];
+		img.onload = function(){
+			context.drawImage(img, 1, 1);
+		}
 	}
 }
 

@@ -64,7 +64,7 @@ function handleNext(event) {
   for (let i = 0; i < chooseBox.length; i++) {
     if (chooseBox[i].classList[1] === "clicked") {
       chooseBox[i].classList.remove("clicked");
-      userVal.push(i + 1);
+      userVal.push(i);
       break;
     }
   }
