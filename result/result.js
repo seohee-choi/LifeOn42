@@ -54,15 +54,24 @@ function getUserName(){
 }
 
 function handleImage(){
-	const userVal = localStorage.getItem("valList");
-	console.log(userVal);
-	localStorage.removeItem("valList");
+	// const userVal = localStorage.getItem("valList");
+	// console.log(userVal);
+	// localStorage.removeItem("valList");
 	let defaultImg = new Image();
 	defaultImg.src = "../pic/default2.png";
-	const context = canvas.getContext('2d');
-	defaultImg.onload = function() {
-		context.drawImage(defaultImg, 1, 1);
-	}
+
+	let team = new Image();
+	team.src = "../pic/1/gam.png";
+
+	const context = canvas.getContext('2d'); // 출력용
+	
+	const workCanvas = document.createElement("canvas"); // 합성용
+	const workContext = canvas.getContext("2d");	
+	workContext.drawImage(defaultImg, 1, 1);
+	workContext.drawImage(team, 1, 1);
+
+	context.globalCompositeOperation="source-over";
+	context.drawImage(workContext, 1, 1);
 }
 
 function init(){
