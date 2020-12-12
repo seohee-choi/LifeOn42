@@ -44,8 +44,9 @@ function paintAnswer(answer) {
 
 function endQna() {
   const userIdx = location.href.lastIndexOf('=')+1;
-	const userName = location.href.substr(userIdx);
-	location.href = `../result/result.html?name=${userName}`;
+  const userName = location.href.substr(userIdx);
+  localStorage.setItem("valList", JSON.stringify(userVal));
+  location.href = `../result/result.html?name=${userName}`;
 }
 
 function handleQna(qArr, aArr) {
@@ -67,7 +68,6 @@ function handleNext(event) {
       break;
     }
   }
-  console.log(userVal);
   nextBtn.disabled = true;
   handleQna(qArr, aArr);
 }
@@ -78,10 +78,7 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
-	console.log("로딩중~~")
     window.onload = () => {
-	console.log("로딩완료~~")
-
         init();
       };
 	}
