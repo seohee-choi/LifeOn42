@@ -1,3 +1,4 @@
+const canvas = document.getElementById("jsCanvas");
 const userImg = document.querySelector(".character");
 const kakao = document.querySelector(".jsKakao");
 const insta = document.querySelector(".jsInsta");
