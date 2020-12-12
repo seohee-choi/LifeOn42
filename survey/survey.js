@@ -4,8 +4,9 @@ const nextBtn = document.querySelector(".jsNext");
 const statusBar = document.querySelector(".status-bar");
 const lstLen = qnaList.length;
 
-let userVal = [];
+export let userVal = [];
 let idx = 0;
+
 
 const qArr = qnaList.map((node) => {
   return {
@@ -44,7 +45,7 @@ function paintAnswer(answer) {
 
 function endQna() {
   const userIdx = location.href.lastIndexOf('=')+1;
-	const userName = location.href.substr(userIdx);
+  const userName = location.href.substr(userIdx);
 	location.href = `../result/result.html?name=${userName}`;
 }
 
@@ -78,10 +79,7 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
-	console.log("로딩중~~")
     window.onload = () => {
-	console.log("로딩완료~~")
-
         init();
       };
 	}

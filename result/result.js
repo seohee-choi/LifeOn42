@@ -1,4 +1,7 @@
+import {userVal} from '../survey/survey.js'
+
 const canvas = document.getElementById("jsCanvas");
+
 const userImg = document.querySelector(".character");
 const kakao = document.querySelector(".jsKakao");
 const insta = document.querySelector(".jsInsta");
@@ -7,6 +10,8 @@ const save = document.querySelector(".jsSave");
 
 const url = "http://seohee-choi@github.io/LifeOn42";
 
+canvas.width = 500;
+canvas.height = 500;
 // function shareKakao() {
 	
 // }
@@ -26,16 +31,12 @@ function copyLink(url) {
 	console.log(tmp);
 }
 
-function savePic() {
+function saveImg() {
 	const img = canvas.toDataURL();
 	const a = document.createElement("a");
 	a.href = img;
-	a.download = "my LifeOn42💬";
+	a.download = "myLifeOn42";
 	a.click();
-}
-
-if (save) {
-	save.addEventListener("click", savePic);
 }
 
 function paintUserName(userName){	
@@ -52,8 +53,22 @@ function getUserName(){
 	}
 }
 
+function handleImage(){
+	let defaultImg = new Image();
+	defaultImg.src = "../pic/default2.png";
+	const context = canvas.getContext('2d');
+	defaultImg.onload = function() {
+		context.drawImage(defaultImg, 1, 1);
+	}
+	console.log(userVal);
+}
+
 function init(){
 	getUserName();
+	handleImage();
+	if (save) {
+		save.addEventListener("click", saveImg);
+	}
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
