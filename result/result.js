@@ -1,4 +1,4 @@
-import {userVal} from '../survey/survey.js'
+// import {userVal} from '../survey/survey.js'
 
 const canvas = document.getElementById("jsCanvas");
 
@@ -48,19 +48,21 @@ function paintUserName(userName){
 function getUserName(){
 	const userIdx = location.href.lastIndexOf('=')+1;
 	const userName = decodeURI(location.href.substr(userIdx));
-	if (userName) {
+	if (userIdx && userName) {
 		paintUserName(userName);
 	}
 }
 
 function handleImage(){
+	const userVal = localStorage.getItem("valList");
+	console.log(userVal);
+	localStorage.removeItem("valList");
 	let defaultImg = new Image();
 	defaultImg.src = "../pic/default2.png";
 	const context = canvas.getContext('2d');
 	defaultImg.onload = function() {
 		context.drawImage(defaultImg, 1, 1);
 	}
-	console.log(userVal);
 }
 
 function init(){

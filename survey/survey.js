@@ -4,9 +4,8 @@ const nextBtn = document.querySelector(".jsNext");
 const statusBar = document.querySelector(".status-bar");
 const lstLen = qnaList.length;
 
-export let userVal = [];
+let userVal = [];
 let idx = 0;
-
 
 const qArr = qnaList.map((node) => {
   return {
@@ -46,7 +45,8 @@ function paintAnswer(answer) {
 function endQna() {
   const userIdx = location.href.lastIndexOf('=')+1;
   const userName = location.href.substr(userIdx);
-	location.href = `../result/result.html?name=${userName}`;
+  localStorage.setItem("valList", JSON.stringify(userVal));
+  location.href = `../result/result.html?name=${userName}`;
 }
 
 function handleQna(qArr, aArr) {
@@ -68,7 +68,6 @@ function handleNext(event) {
       break;
     }
   }
-  console.log(userVal);
   nextBtn.disabled = true;
   handleQna(qArr, aArr);
 }
