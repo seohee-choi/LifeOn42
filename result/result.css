@@ -9,7 +9,7 @@ body {
   /* border: 3px dotted black; */
   /* height: 100%; */
   width: auto;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 header {

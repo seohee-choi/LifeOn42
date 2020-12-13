@@ -69,20 +69,23 @@ function handleImage(callback){
 		image.src = imgURLs[i];
 		console.log(imgURLs[i]);
 		image.onload = function(){
-			workContext.drawImage(image, 1, 1);
+
+			setTimeout(() => {
+				workContext.drawImage(image, 1, 1);
+
 			imagesOk++;
 			if (imagesOk >= imgURLs.length)
 			{
 				console.log(imagesOk, imgURLs.length);
 				callback(workCanvas);
 			}
+		}, 1000);
+
 		}
 	}
 }
 
 function drawCanvas(workCanvas){
-	const body = document.querySelector("body");
-	body.appendChild( workCanvas);
 	const context = canvas.getContext('2d');
 	context.drawImage(workCanvas, 0, 0);
 }
