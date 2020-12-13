@@ -1,5 +1,9 @@
 @import "../reset.css";
 
+/* * {
+  font-family: "Russo One", sans-serif;
+} */
+
 html,
 body {
   /* display: flex;
@@ -20,28 +24,24 @@ header {
 }
 
 canvas {
-  border: 1px solid black;
+  border: 0.5vh solid black;
 }
-
-/* .status-bar {
-  width: 90%;
-  height: 5px;
-} */
 
 .result {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 5% 0; */
   width: auto;
   height: auto;
-  /* border: 2px solid red; */
 }
 
 .title {
   margin: 30px;
-  font-size: 20pt;
+  font-size: 25pt;
+  font-family: "Russo One", sans-serif;
+  /* font-family: "Black Han Sans", sans-serif;
+  font-family: "Nanum Gothic", sans-serif; */
 }
 
 .character {
@@ -50,37 +50,77 @@ canvas {
   max-width: 500px;
   max-height: 500px;
   margin-bottom: 30px;
-  /* background-color: pink; */
 }
 
 .character .canvas {
   width: 100%;
   height: 100%;
 }
-.creater {
-  background-color: purple;
-}
 
-.profile {
-  background-color: green;
-}
-
-.snsBtn {
+.Btns {
+  width: 300px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
-  width: 500px;
-  height: auto;
+  border: 2px solid blueviolet;
   margin-bottom: 30px;
 }
 
 button {
+  position: relative;
   width: 70px;
-  height: 50px;
+  height: 45px;
+  background-color: #00afb1;
+  border: 0;
+  outline: 0;
 }
 
 i {
-  font-size: 30px;
-  /* border: 2px solid blueviolet; */
+  font-size: 25px;
+  color: black;
+}
+
+.fas {
+  color: white;
+}
+
+.creater {
+  width: 80%;
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fab {
+  /* border: 2px solid red; */
+  margin-left: 10px;
+}
+
+.discription {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+  border: 2px solid blue;
+
+  /* flex-direction: row; */
+}
+
+.txt {
+  /* width: 100px; */
+  border-top: 2px solid pink;
+  padding: 20px 10px 5px 10px;
+}
+
+/* .discription :last-child {
+} */
+
+.name {
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-family: "Russo One", sans-serif;
 }
