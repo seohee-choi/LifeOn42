@@ -1,22 +1,24 @@
 @import "../reset.css";
 
-html,
-body {
-  /* display: flex;
+html,body {
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: space-around; */
+  /* justify-content: space-between; */
+  align-items: center;
   /* border: 3px dotted black; */
   height: 100%;
-  width: auto;
-  overflow: hidden;
+  width: 100%;
+   
 }
 
 header {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: flex-end;
   height: 5%;
+  background-color: #00afb1;
+
 }
 
 /* .status-bar {
@@ -30,8 +32,11 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   margin-top: 20px;
-  width: auto;
+  width: 80%;
+
+  max-width: 1200px;
   height: 80%;
   /* border: 2px solid red; */
 }
@@ -65,8 +70,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 90%;
-  height: 450px;
+  height: 40%;
   margin-top: 10px;
   /* margin-top: 30px; */
   /* border: 2px solid purple; */
@@ -76,12 +82,18 @@ header {
   width: 100%;
   height: 60px;
   margin-top: 20px;
-  border: 2px solid brown;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding-left: 10px;
+  
+  border: 2px solid rgb(87, 42, 165);
+  border-radius: 20px;
   background-color: #eeebff;
 }
 
 .clicked {
+  border: 2px solid white;
   background-color: #a18eff;
 }
 
@@ -103,7 +115,16 @@ nav {
 .nextBtn {
   width: 300px;
   height: 50px;
-  /* margin: 5% 10%; */
-  border: 2px solid black;
+  padding: 10px 20px 10px 20px ;
+  display: flex;
+  margin: 7%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 20px;
   background-color: pink;
+  font-size: 38px;
+  border-width: 0;
+  cursor: pointer;
+  color: white;
 }

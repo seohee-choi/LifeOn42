@@ -7,6 +7,7 @@ const startBtn = document.querySelector(".js-button");
   const alertName = document.querySelector(".alertName");
   if (userName < 1) {
     alertName.innerText = "Write your name ☝";
+    alertName.style.fontFamily = 'Russo One', sans-serif;
   } else location.href = `survey/survey.html?name=${userName}`;
 }
 
