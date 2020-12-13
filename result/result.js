@@ -35,13 +35,13 @@ function getUserName(){
 	const userIdx = location.href.lastIndexOf('=')+1;
 	const userName = decodeURI(location.href.substr(userIdx));
 	if (userIdx && userName) {
+		console.log(userIdx, userName);
 		paintUserName(userName);
 	}
 }
 
 function getUserVal(){
 	const userVal = localStorage.getItem("valList");
-	localStorage.removeItem("valList");
 	return userVal;
 }
 
@@ -58,22 +58,32 @@ function getImageURL(){
 
 function handleImage(){
 	const imgURLs = getImageURL();
-	const context = canvas.getContext('2d');
-	let img = new Image(); 
 
-	img.src = "../pic/default2.png";
-	img.onload = function(){
-		context.drawImage(img, 1, 1);
+	//이미지 요소들을 일시에 뿌려주기 위해서 두 개의 캔버스 사용했습니다.
+	const workCanvas = document.createElement("canvas");
+	workCanvas.width = 500;
+	workCanvas.height = 500;
+
+	const workContext = workCanvas.getContext('2d');
+
+	let image = new Image();
+	image.src = "../pic/default2.png";
+
+	image.onload = function(){
+		workContext.drawImage(image, 1, 1);
 	}
-	context.globalCompositeOperation="source-over";
+	// workContext.globalCompositeOperation="source-over";
 
 	for (let i=0; i<imgURLs.length; i++) { 
-		let img = new Image(); 
-		img.src = imgURLs[i];
-		img.onload = function(){
-			context.drawImage(img, 1, 1);
+		let image = new Image(); 
+		image.src = imgURLs[i];
+		console.log(imgURLs[i]);
+		image.onload = function(){
+			workContext.drawImage(image, 1, 1);
 		}
 	}
+	const context = canvas.getContext('2d');
+	setTimeout(() => {context.drawImage(workCanvas, 0, 0);}, 1000);
 }
 
 function init(){
