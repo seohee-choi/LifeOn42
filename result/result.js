@@ -80,11 +80,10 @@ function handleImage(){
 		console.log(imgURLs[i]);
 		image.onload = function(){
 			workContext.drawImage(image, 1, 1);
-			console.log("온로드진입");
 		}
 	}
 	const context = canvas.getContext('2d');
-	setTimeout(() => {context.drawImage(workCanvas, 0, 0); console.log("드로우이미지 진입")}, 1000);
+	setTimeout(() => {context.drawImage(workCanvas, 0, 0);}, 2000);
 }
 
 function init(){
