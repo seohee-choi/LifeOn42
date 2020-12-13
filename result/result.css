@@ -9,7 +9,7 @@ body {
   /* border: 3px dotted black; */
   /* height: 100%; */
   width: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 header {
@@ -50,12 +50,19 @@ canvas {
   max-width: 500px;
   max-height: 500px;
   margin-bottom: 30px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .character .canvas {
   width: 100%;
   height: 100%;
+}
+.creater {
+  background-color: purple;
+}
+
+.profile {
+  background-color: green;
 }
 
 .snsBtn {

@@ -1,18 +1,22 @@
 @import "reset.css";
 
 .main {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-content: space-around;
+  justify-content: space-around;
+  align-content: center;
   flex-direction: column;
-  align-items: center;
-  background-color: black;
+  /* align-items: center; */
+  /* background-color: red; */
 }
 
 .midBox {
   width: 40%;
   height: 80%;
-  margin-top: 10%;
+  /* height: 500px; */
+
+  /* margin-top: 10%; */
   display: flex;
   justify-content: center;
   align-content: space-around;
@@ -22,18 +26,27 @@
 }
 .title {
   display: flex;
-  margin-top: 10%;
+  margin: 0% 10%;
   justify-content: center;
   align-items: center;
-  width: 1000px;
-  height: 300px;
+  width: 80%;
+  height: 30%;
   font-weight: 900;
-  /* background-color: blue; */
+  background-color: blue;
   font-size: 80px;
   color: black;
 }
 
 .user {
+  border-bottom: 5px solid black;
+  background-color: transparent;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  border-right: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  padding-bottom: 10px;
 }
 
 button {
@@ -45,7 +58,7 @@ button {
   height: 100px;
   font-weight: 900;
   border-radius: 20px;
-  background-color: blue;
+  background-color: #00afb1;
   font-size: 38px;
   border-width: 0;
   cursor: pointer;
