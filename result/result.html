@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous"
-  />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="result.css">
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="result.css" />
     <title>LifeOn42</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="result">
-        <div class="js-title title">당신의 LifeOn42는...</div>
-        <div class="character">
-            <canvas id="jsCanvas" class="canvas">
-            </canvas>
-        </div>
-        <div class="snsBtn">    
-            <button onclick="copyLink()" class="jsLink">
-                <i class="fas fa-share-alt"></i>
-            </button>
-            <button class="jsSave">
-                <i class="fas fa-download"></i>
-            </button>
-        </div>
+      <div class="js-title title">당신의 LifeOn42는...</div>
+      <div class="character">
+        <canvas id="jsCanvas" class="canvas"> </canvas>
+      </div>
+      <div class="snsBtn">
+        <button onclick="share('title','url')">
+          <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="jsSave">
+          <i class="fas fa-download"></i>
+        </button>
+      </div>
     </div>
     <script src="result.js"></script>
-</body>
+  </body>
 </html>

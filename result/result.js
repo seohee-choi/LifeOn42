@@ -1,6 +1,5 @@
 const canvas = document.getElementById("jsCanvas");
 const userImg = document.querySelector(".character");
-const link = document.querySelector(".jsLink");
 const save = document.querySelector(".jsSave");
 
 const url = "http://seohee-choi@github.io/LifeOn42";
@@ -8,14 +7,12 @@ const url = "http://seohee-choi@github.io/LifeOn42";
 canvas.width = 500;
 canvas.height = 500;
 
-function copyLink(url) {
-	const tmp = document.createElement("textarea");
-	document.body.appendChild(tmp);
-	tmp.value = url;
-	tmp.select();
-	document.execCommand("copy");
-	document.body.removeChild(tmp);
-	console.log(tmp);
+function share(title, url) {
+	if(navigator.share){
+		navigator.share({title: title, text: "당신의 42 성향을 알아보세요!!", url: url});
+	} else {
+		alert('지원하지 않는 브라우저입니다.');
+	}
 }
 
 function saveImg() {
@@ -48,6 +45,8 @@ function getUserVal(){
 function getImageURL(){
 	const userVal = JSON.parse(getUserVal());
 	const imageURLs = [];
+	imageURLs.push(`../pic/default2.png`);
+
 	let i = 0;
 	userVal.forEach(function(element) { 
 		imageURLs.push(`../pic/${i}/${element}.png`);
@@ -56,39 +55,36 @@ function getImageURL(){
 	return imageURLs;
 }
 
-function handleImage(){
+function handleImage(callback){
 	const imgURLs = getImageURL();
-
 	//이미지 요소들을 일시에 뿌려주기 위해서 두 개의 캔버스 사용했습니다.
 	const workCanvas = document.createElement("canvas");
+	const workContext = workCanvas.getContext('2d');
 	workCanvas.width = 500;
 	workCanvas.height = 500;
 
-	const workContext = workCanvas.getContext('2d');
-
-	let image = new Image();
-	image.src = "../pic/default2.png";
-
-	image.onload = function(){
-		workContext.drawImage(image, 1, 1);
-	}
-	// workContext.globalCompositeOperation="source-over";
-
+	let imagesOk = 0;
 	for (let i=0; i<imgURLs.length; i++) { 
 		let image = new Image(); 
 		image.src = imgURLs[i];
 		console.log(imgURLs[i]);
 		image.onload = function(){
 			workContext.drawImage(image, 1, 1);
+			imagesOk++;
+			if (imagesOk >= imgURLs.length)
+				callback(workCanvas);
 		}
 	}
+}
+
+function drawCanvas(workCanvas){
 	const context = canvas.getContext('2d');
-	setTimeout(() => {context.drawImage(workCanvas, 0, 0);}, 1000);
+	context.drawImage(workCanvas, 0, 0);
 }
 
 function init(){
 	getUserName();
-	handleImage();
+	handleImage(drawCanvas);
 	if (save) {
 		save.addEventListener("click", saveImg);
 	}
