@@ -83,14 +83,14 @@ function handleImage(callback){
 function drawCanvas(workCanvas){
 	const context = canvas.getContext('2d');
 	context.drawImage(workCanvas, 0, 0);
-	if (save) {
-		save.addEventListener("click", saveImg);
-	}
 }
 
 function init(){
 	getUserName();
 	handleImage(drawCanvas);
+	if (save) {
+		save.addEventListener("click", saveImg);
+	}
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
