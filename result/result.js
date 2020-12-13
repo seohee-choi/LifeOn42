@@ -69,12 +69,24 @@ function handleImage(callback){
 		image.src = imgURLs[i];
 		console.log(imgURLs[i]);
 		image.onload = function(){
+			//요소의 로딩시간이 길어지면 다른 요소가 로딩되지 않는 현상이 발생했습니다.
+			//해당 문제를 해결하기 위해 콜백, 클래스, 온로드 등 여러가지 시도를 해보았으나 실패했습니다.
 			workContext.drawImage(image, 1, 1);
 			imagesOk++;
 			if (imagesOk >= imgURLs.length)
+			{
 				callback(workCanvas);
+				console.log(imagesOk, imgURLs.length);
+			}
 		}
 	}
+// 	let timer = setInterval(function() {
+// 		if (imagesOk === imgURLs.length) {
+// 			 clearInterval(timer);
+// 			 callback(workCanvas);
+// 			}
+//    }, 100);
+
 }
 
 function drawCanvas(workCanvas){
