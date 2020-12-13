@@ -81,6 +81,8 @@ function handleImage(callback){
 }
 
 function drawCanvas(workCanvas){
+	const body = document.querySelector("body");
+	body.appendChild( workCanvas);
 	const context = canvas.getContext('2d');
 	context.drawImage(workCanvas, 0, 0);
 }
