@@ -44,6 +44,9 @@ function paintAnswer(answer) {
 
 function endQna() {
   const userIdx = location.href.lastIndexOf('=')+1;
+  //name을 location말고 localstorage에 넣으세요 ^^
+  //여기서는 없애도 돼요 ^^
+
   const userName = location.href.substr(userIdx);
   localStorage.setItem("valList", JSON.stringify(userVal));
   location.href = `../result/result.html?name=${userName}`;
