@@ -43,10 +43,10 @@ function paintAnswer(answer) {
 }
 
 function endQna() {
-  const userIdx = location.href.lastIndexOf('=')+1;
-  const userName = location.href.substr(userIdx);
+  // const userIdx = location.href.lastIndexOf('=')+1;
+  // const userName = location.href.substr(userIdx);
   localStorage.setItem("valList", JSON.stringify(userVal));
-  location.href = `../result/result.html?name=${userName}`;
+  location.href = `../result/result.html`;
 }
 
 function handleQna(qArr, aArr) {

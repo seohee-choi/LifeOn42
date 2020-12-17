@@ -29,10 +29,13 @@ function paintUserName(userName){
 }
 
 function getUserName(){
-	const userIdx = location.href.lastIndexOf('=')+1;
-	const userName = decodeURI(location.href.substr(userIdx));
-	if (userIdx && userName) {
-		console.log(userIdx, userName);
+  //name을 location말고 localstorage에 넣으세요 ^^
+
+	// const userIdx = location.href.lastIndexOf('=')+1;
+	const userName = localStorage.getItem("userName");
+	// decodeURI(location.href.substr(userIdx));
+	if (userName) {
+		// console.log(userIdx, userName);
 		paintUserName(userName);
 	}
 }
@@ -67,7 +70,6 @@ function handleImage(callback){
 	for (let i=0; i<imgURLs.length; i++) { 
 		let image = new Image(); 
 		image.src = imgURLs[i];
-		console.log(imgURLs[i]);
 		image.onload = function(){
 			//요소의 로딩시간이 길어지면 다른 요소가 로딩되지 않는 현상이 발생했습니다.
 			//해당 문제를 해결하기 위해 콜백, 클래스, 온로드 등 여러가지 시도를 해보았으나 실패했습니다.
@@ -76,22 +78,15 @@ function handleImage(callback){
 			if (imagesOk >= imgURLs.length)
 			{
 				callback(workCanvas);
-				console.log(imagesOk, imgURLs.length);
 			}
 		}
 	}
-// 	let timer = setInterval(function() {
-// 		if (imagesOk === imgURLs.length) {
-// 			 clearInterval(timer);
-// 			 callback(workCanvas);
-// 			}
-//    }, 100);
-
 }
 
 function drawCanvas(workCanvas){
 	const context = canvas.getContext('2d');
 	context.drawImage(workCanvas, 0, 0);
+	console.log(imagesOk, imgURLs.length);
 }
 
 function init(){
@@ -104,7 +99,9 @@ function init(){
 
 document.addEventListener("DOMContentLoaded", () =>{
     window.onload = () => {
-       	 init();
+			init();
+			if (location.href.indexOf('#')==-1) 
+				location.replace(location.href+'?#');
    	   };
 	}
 );
