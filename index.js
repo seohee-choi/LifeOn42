@@ -8,8 +8,10 @@ const startBtn = document.querySelector(".js-button");
   if (userName < 1) {
     alertName.innerText = "Write your name ☝";
     alertName.style.fontFamily = 'Russo One', sans-serif;
-  } else location.href = `survey/survey.html?name=${userName}`;
-  //name을 location말고 localstorage에 넣으세요 ^^
+  } else {
+    localStorage.setItem("userName", userName);
+    location.href = `survey/survey.html`;
+  }
 }
 
 function init() {

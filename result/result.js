@@ -31,10 +31,11 @@ function paintUserName(userName){
 function getUserName(){
   //name을 location말고 localstorage에 넣으세요 ^^
 
-	const userIdx = location.href.lastIndexOf('=')+1;
-	const userName = decodeURI(location.href.substr(userIdx));
-	if (userIdx && userName) {
-		console.log(userIdx, userName);
+	// const userIdx = location.href.lastIndexOf('=')+1;
+	const userName = localStorage.getItem("userName");
+	// decodeURI(location.href.substr(userIdx));
+	if (userName) {
+		// console.log(userIdx, userName);
 		paintUserName(userName);
 	}
 }
