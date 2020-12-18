@@ -1,9 +1,5 @@
 @import "reset.css";
 
-/* * {
-
-} */
-
 html,
 body {
   width: 100%;
@@ -35,7 +31,6 @@ body {
   font-size: 15vh;
   color: black;
   font-family: "Russo One", sans-serif;
-  
 }
 
 .user {
