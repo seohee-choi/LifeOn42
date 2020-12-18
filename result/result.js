@@ -94,16 +94,13 @@ function init() {
 		save.addEventListener("click", saveImg);
 	}
 }
+
 const res = document.querySelector(".result");
 
-
 document.addEventListener("DOMContentLoaded", () => {
+	if (location.href.indexOf('#') == -1)
+		res.style.display="none";
 	window.onload = () => {	
-		if (location.href.indexOf('#') == -1)
-			res.style.display="none";
-			//여기에 로딩이미지를 넣으면 됩니다.
-		else
-			res.style.display="";
 		init();
 	};
 }
