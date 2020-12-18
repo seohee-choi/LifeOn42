@@ -29,7 +29,6 @@ function paintUserName(userName) {
 }
 
 function getUserName() {
-	//name을 location말고 localstorage에 넣으세요 ^^
 	const userName = localStorage.getItem("userName");
 	if (userName) {
 		paintUserName(userName);
@@ -37,12 +36,15 @@ function getUserName() {
 }
 
 function getUserVal() {
-	const userVal = localStorage.getItem("valList");
+	const lstLen = qnaList.length;
+	let userVal = JSON.parse(localStorage.getItem("valList"));
+	if (userVal.length > lstLen)
+		userVal = userVal.slice(0, lstLen);
 	return userVal;
 }
 
 function getImageURL() {
-	const userVal = JSON.parse(getUserVal());
+	const userVal = getUserVal();
 	const imageURLs = [];
 	imageURLs.push(`../pic/default2.png`);
 
@@ -63,7 +65,7 @@ function handleImage(callback) {
 	workCanvas.height = 500;
 
 	let imagesOk = 0;
-	for (let i = 0; i < imgURLs.length; i++) {
+	for (let i = 0; i < imgURLs.length - 1; i++) {
 		let image = new Image();
 		image.src = imgURLs[i];
 		image.onload = function () {
@@ -71,10 +73,8 @@ function handleImage(callback) {
 			//해당 문제를 해결하기 위해 콜백, 클래스, 온로드 등 여러가지 시도를 해보았으나 실패했습니다.
 			workContext.drawImage(image, 1, 1);
 			imagesOk++;
-			if (imagesOk >= imgURLs.length) {
+			if (imagesOk >= imgURLs.length - 1) {
 				callback(workCanvas);
-				if (location.href.indexOf('#') == -1)
-					location.replace(location.href + '?#');
 			}
 		}
 	}
@@ -83,6 +83,8 @@ function handleImage(callback) {
 function drawCanvas(workCanvas) {
 	const context = canvas.getContext('2d');
 	context.drawImage(workCanvas, 0, 0);
+	if (location.href.indexOf('#') == -1)
+		location.replace(location.href + '?#');
 }
 
 function init() {
