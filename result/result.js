@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			res.style.display="none";
 			//여기에 로딩이미지를 넣으면 됩니다.
 		else
-			res.style.display="block";
+			res.style.display="";
 		init();
 	};
 }
