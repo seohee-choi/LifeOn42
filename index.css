@@ -1,9 +1,5 @@
 @import "reset.css";
 
-/* * {
-
-} */
-
 html,
 body {
   width: 100%;
@@ -35,11 +31,9 @@ body {
   font-size: 15vh;
   color: black;
   font-family: "Russo One", sans-serif;
-  
 }
 
 .user {
-  /* border-bottom: 3px solid black; */
   background-color: transparent;
   text-align: center;
   font-size: 5vh;
@@ -48,13 +42,17 @@ body {
   outline: 0;
 }
 
+input::placeholder {
+  font-family: "Russo One", sans-serif;
+}
+
 button {
+  -webkit-tap-highlight-color: transparent; 
   padding: 1vh 2vh;
   display: flex;
   margin: 7%;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
   border-radius: 40px;
   background-color: #00afb1;
   font-size: 5vh;
@@ -62,4 +60,9 @@ button {
   outline: 0;
   cursor: pointer;
   color: white;
+  font-family: "Russo One", sans-serif;
+}
+
+button:active{
+  background-color: hsl(177, 52%, 42%);
 }

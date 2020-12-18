@@ -43,8 +43,6 @@ function paintAnswer(answer) {
 }
 
 function endQna() {
-  // const userIdx = location.href.lastIndexOf('=')+1;
-  // const userName = location.href.substr(userIdx);
   localStorage.setItem("valList", JSON.stringify(userVal));
   location.href = `../result/result.html`;
 }
@@ -77,9 +75,9 @@ function init() {
   nextBtn.addEventListener("click", handleNext);
 }
 
-document.addEventListener("DOMContentLoaded", () =>{
-    window.onload = () => {
-        init();
-      };
-	}
-	);
+document.addEventListener("DOMContentLoaded", () => {
+  window.onload = () => {
+    init();
+  };
+}
+);

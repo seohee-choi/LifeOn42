@@ -4,20 +4,16 @@ html,body {
 	display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 3px dotted black; */
   height: 100%;
   width: 100%;
   font-size: 62.5%;
-   
 }
-
 
 header {
 	width: 100%;
 	height: 30px;
 	background-color: #00afb1;
 }
-
 
 .status-bar {
   width: 100%;
@@ -27,17 +23,18 @@ header {
 .status-bar[value] {
 	-webkit-appearance: none;
 	appearance: none;
-  }
+}
 
-  
 .status-bar[value]::-webkit-progress-bar {
 	background-color:rgb(255, 245, 247);
-  }
+}
 
-  .status-bar[value]::-webkit-progress-value {
+.status-bar[value]::-webkit-progress-value {
 	background-color: #8396e9;
-  }
+}
+
 .result {
+  -webkit-tap-highlight-color: transparent; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,27 +43,9 @@ header {
   margin-top: 20px;
   width: 100%;
   color:rgb(32, 32, 32);
-
   max-width: 1200px;
   height: 80%;
 }
-
-/* main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .survey-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 80%;
-  /* margin-top: 30px; */
-/* border: 5px solid orange; 
-} */
 
 .question {
   width: 90%;
@@ -74,31 +53,28 @@ header {
   font-size: 4.5vh ;
   display: flex;
   align-items: center;
-
   word-break:keep-all;
 	font-family: 'Black Han Sans', sans-serif;
-  /*background-color: red;*/
 }
 
 .responses {
+  -webkit-tap-highlight-color: transparent; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 90%;
   min-height: 300px;
   height: 40%;
   margin-top: 10px;
   line-height: 1.3;
-font-family: 'Nanum Gothic', sans-serif;
-
+  font-family: 'Nanum Gothic', sans-serif;
   word-break:keep-all;
-  /* margin-top: 30px; */
-  /* border: 2px solid purple; */
+  cursor: pointer;
 }
 
 .choose {
+  -webkit-tap-highlight-color: transparent; 
   width: 100%;
   height: 60px;
   margin-top: 20px;
@@ -106,7 +82,7 @@ font-family: 'Nanum Gothic', sans-serif;
   align-items: center;
   font-size: 2.3vh;
   padding: 0px 10px;
-  
+  font-family: 'Nanum Gothic', sans-serif;
   border-radius: 20px;
   background-color: #f3f1ff;
 }
@@ -118,31 +94,34 @@ font-family: 'Nanum Gothic', sans-serif;
 nav {
   display: flex;
   justify-content: center;
-
   align-items: flex-start;
-
   width: 100%;
   height: 15%;
-
   position: fixed;
   bottom: 0px;
-  /* position: fixed; */
-  /* background-color: gray; */
 }
 
 .nextBtn {
-  width: 300px;
-  height: 50px;
+  -webkit-tap-highlight-color: transparent; 
+  width: 30vh;
+  height: 8vh;
   padding: 10px 20px 10px 20px ;
   display: flex;
   margin-top: 7%;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
   border-radius: 20px;
   background-color: hsl(177, 46%, 56%);
-  font-size: 38px;
+  font-size: 30px;
   border-width: 0;
   cursor: pointer;
   color: white;
+  border: 0;
+  outline: 0;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 1px;
+}
+
+.nextBtn:active{
+  background-color: hsl(177, 52%, 42%);
 }
