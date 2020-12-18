@@ -102,6 +102,7 @@ nav {
 }
 
 .nextBtn {
+  -webkit-tap-highlight-color: transparent; 
   width: 30vh;
   height: 8vh;
   padding: 10px 20px 10px 20px ;
@@ -119,4 +120,8 @@ nav {
   outline: 0;
   font-family: "Russo One", sans-serif;
   letter-spacing: 1px;
+}
+
+.nextBtn:active{
+  background-color: hsl(177, 52%, 42%);
 }
