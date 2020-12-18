@@ -1,19 +1,8 @@
 @import "../reset.css";
 
-/* * {
-  font-family: "Russo One", sans-serif;
-} */
-
 html,
 body {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: space-around; */
-  /* border: 3px dotted black; */
-  /* height: 100%; */
   width: auto;
-  /* overflow: hidden; */
 }
 
 header {
@@ -40,8 +29,6 @@ canvas {
   margin: 30px;
   font-size: 25pt;
   font-family: "Russo One", sans-serif;
-  /* font-family: "Black Han Sans", sans-serif;
-  font-family: "Nanum Gothic", sans-serif; */
 }
 
 .character {
@@ -63,34 +50,44 @@ canvas {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  border: 2px solid blueviolet;
+  /* border: 2px solid red; */
   margin-bottom: 30px;
 }
 
 button {
   position: relative;
-  width: 70px;
-  height: 45px;
+  width: 100px;
+  height: 70px;
   background-color: #00afb1;
   border: 0;
   outline: 0;
+  border-radius: 8px;
 }
 
 i {
-  font-size: 25px;
+  font-size: 20px;
   color: black;
+}
+
+.exBtn {
+  margin-top: 8px;
+  font-size: small;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 .fas {
   color: white;
+  font-size: 23px;
 }
 
-.creater {
+.explain {
   width: 80%;
-  border: 2px solid green;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid green;
+  margin-bottom: 40px;
 }
 
 .fab {
@@ -102,25 +99,30 @@ i {
   display: flex;
   justify-content: space-around;
   padding: 20px 0px;
-  border: 2px solid blue;
-
-  /* flex-direction: row; */
+  /* border: 2px solid blue; */
 }
 
 .txt {
-  /* width: 100px; */
-  border-top: 2px solid pink;
   padding: 20px 10px 5px 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 25px;
 }
 
-/* .discription :last-child {
-} */
+.dev {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+}
+
+.creater {
+  border: 2px dashed red;
+  padding: 13px;
+}
 
 .name {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-family: "Russo One", sans-serif;
 }
