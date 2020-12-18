@@ -47,6 +47,7 @@ input::placeholder {
 }
 
 button {
+  -webkit-tap-highlight-color: transparent; 
   padding: 1vh 2vh;
   display: flex;
   margin: 7%;
@@ -60,4 +61,8 @@ button {
   cursor: pointer;
   color: white;
   font-family: "Russo One", sans-serif;
+}
+
+button:active{
+  background-color: hsl(177, 52%, 42%);
 }
