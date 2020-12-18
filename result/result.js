@@ -2,14 +2,14 @@ const canvas = document.getElementById("jsCanvas");
 const userImg = document.querySelector(".character");
 const save = document.querySelector(".jsSave");
 
-const url = "http://seohee-choi@github.io/LifeOn42";
+const url = "http://seohee-choi.github.io/LifeOn42";
 
 canvas.width = 500;
 canvas.height = 500;
 
-function share(title, url) {
+function share(title) {
 	if (navigator.share) {
-		navigator.share({ title: title, text: "당신의 42 성향을 알아보세요!!", url: url });
+		navigator.share({ title: title, text: `지금 바로 당신의 42 성향을 알아보세요!! ${url}`});
 	} else {
 		alert('지원하지 않는 브라우저입니다.');
 	}
@@ -94,9 +94,16 @@ function init() {
 		save.addEventListener("click", saveImg);
 	}
 }
+const res = document.querySelector(".result");
+
 
 document.addEventListener("DOMContentLoaded", () => {
-	window.onload = () => {
+	window.onload = () => {	
+		if (location.href.indexOf('#') == -1)
+			res.style.display="none";
+			//여기에 로딩이미지를 넣으면 됩니다.
+		else
+			res.style.display="block";
 		init();
 	};
 }
