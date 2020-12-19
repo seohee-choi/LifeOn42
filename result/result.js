@@ -65,19 +65,30 @@ function handleImage(callback) {
 	workCanvas.height = 500;
 
 	let imagesOk = 0;
-	for (let i = 0; i < imgURLs.length - 1; i++) {
+	let bgimg = new Image();
+	bgimg.src = imgURLs[imgURLs.length - 1];
+	bgimg.onload = function () {
+		workContext.drawImage(bgimg, 0, 0);
 		let image = new Image();
-		image.src = imgURLs[i];
-		image.onload = function () {
-			//요소의 로딩시간이 길어지면 다른 요소가 로딩되지 않는 현상이 발생했습니다.
-			//해당 문제를 해결하기 위해 콜백, 클래스, 온로드 등 여러가지 시도를 해보았으나 실패했습니다.
-			workContext.drawImage(image, 1, 1);
-			imagesOk++;
-			if (imagesOk >= imgURLs.length - 1) {
-				callback(workCanvas);
+		image.src = imgURLs[0];
+		image.onload = () => {
+			workContext.drawImage(image, 0, 0);
+			for (let i = 1; i < imgURLs.length - 1; i++) {
+				let image = new Image();
+				image.src = imgURLs[i];
+				image.onload = function () {
+					//요소의 로딩시간이 길어지면 다른 요소가 로딩되지 않는 현상이 발생했습니다.
+					//해당 문제를 해결하기 위해 콜백, 클래스, 온로드 등 여러가지 시도를 해보았으나 실패했습니다.
+					workContext.drawImage(image, 0, 0);
+					imagesOk++;
+					if (imagesOk >= imgURLs.length - 2) {
+						callback(workCanvas);
+					}
+				}
 			}
 		}
 	}
+
 }
 
 function drawCanvas(workCanvas) {
