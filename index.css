@@ -25,18 +25,22 @@ body {
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 30%;
   font-weight: 600;
-  font-size: 15vh;
+  font-size: 18vmin;
   color: black;
   font-family: "Russo One", sans-serif;
 }
 
-span {
+.subtitle {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px ;
   font-family: 'Nanum Gothic Coding', "Russo One";
 
   margin-top: 1%;
-  margin-bottom: 5%;
+  margin-bottom: 15px;
 
 }
 .user {
@@ -44,7 +48,7 @@ span {
 
   background-color: transparent;
   text-align: center;
-  font-size: 5vh;
+  font-size: 5vmin;
   padding-bottom: 5px;
   border: 0;
   outline: 0;
