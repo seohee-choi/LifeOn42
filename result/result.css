@@ -31,17 +31,36 @@ canvas {
   font-family: "Russo One", sans-serif;
 }
 
-.character {
-  width: 80%;
-  height: 80%;
-  max-width: 500px;
-  max-height: 500px;
-  margin-bottom: 30px;
-}
-
-.character .canvas {
+.main {
   width: 100%;
   height: 100%;
+  max-width: 1000px;
+  max-height: 1000px;
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.character {
+  width: 100%;
+  height: 100%;
+}
+
+.character :first-child {
+  /* border: 2px solid red; */
+  margin-right: 100px;
+}
+
+.character:last-child{
+  border: 2px solid pink;
+  word-wrap: break-word;
+}
+
+.canvas {
+  /* border: 2px solid pink; */
+  box-sizing: border-box;
 }
 
 .Btns {
@@ -50,8 +69,7 @@ canvas {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  /* border: 2px solid red; */
-  margin-bottom: 30px;
+  margin: 30px 0px;
 }
 
 button {
@@ -91,7 +109,6 @@ i {
 }
 
 .fab {
-  /* border: 2px solid red; */
   margin-left: 10px;
 }
 
@@ -99,7 +116,6 @@ i {
   display: flex;
   justify-content: space-around;
   padding: 20px 0px;
-  /* border: 2px solid blue; */
 }
 
 .txt {
@@ -123,6 +139,5 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 30px; */
   font-family: "Russo One", sans-serif;
 }
