@@ -5,6 +5,7 @@ const statusBar = document.querySelector(".status-bar");
 const lstLen = qnaList.length;
 
 let userVal = [];
+let resultVal = 0;
 let idx = 0;
 
 const qArr = qnaList.map((node) => {
@@ -15,6 +16,11 @@ const qArr = qnaList.map((node) => {
 const aArr = qnaList.map((node) => {
   return {
     answer: node.a,
+  };
+});
+const scoreArr = qnaList.map((node) => {
+  return {
+    result: node.score,
   };
 });
 
@@ -44,6 +50,8 @@ function paintAnswer(answer) {
 
 function endQna() {
   localStorage.setItem("valList", JSON.stringify(userVal));
+  localStorage.setItem("valNum", resultVal);
+
   location.href = `../result/result.html`;
 }
 
@@ -63,6 +71,11 @@ function handleNext(event) {
     if (chooseBox[i].classList[1] === "clicked") {
       chooseBox[i].classList.remove("clicked");
       userVal.push(i);
+      // console.log(userVal.length);
+      if (userVal.length !== 1) {
+        resultVal += parseInt(scoreArr[userVal.length - 1][i]);
+        console.log(scoreArr[userVal.length - 1][i], i, Array.isArray(scoreArr[userVal.length]));
+      }
       break;
     }
   }

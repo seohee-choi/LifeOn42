@@ -9,7 +9,7 @@ canvas.height = 500;
 
 function share(title) {
 	if (navigator.share) {
-		navigator.share({ title: title, text: `지금 바로 당신의 42 성향을 알아보세요!! ${url}`});
+		navigator.share({ title: title, text: `지금 바로 당신의 42 성향을 알아보세요!! ${url}` });
 	} else {
 		alert('지원하지 않는 브라우저입니다.');
 	}
@@ -97,10 +97,21 @@ function drawCanvas(workCanvas) {
 	if (location.href.indexOf('#') == -1)
 		location.replace(location.href + '?#');
 }
+function getResultVal() {
+	const resultVal = localStorage.getItem("valNum");
+	console.log(resultVal);
+	return resultVal;
+}
+
+function handleResult() {
+	const resultVal = getResultVal();
+	console.log(resultVal);
+}
 
 function init() {
 	getUserName();
 	handleImage(drawCanvas);
+	handleResult();
 	if (save) {
 		save.addEventListener("click", saveImg);
 	}
@@ -110,8 +121,8 @@ const res = document.querySelector(".result");
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (location.href.indexOf('#') == -1)
-		res.style.display="none";
-	window.onload = () => {	
+		res.style.display = "none";
+	window.onload = () => {
 		init();
 	};
 }

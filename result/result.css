@@ -59,7 +59,7 @@ canvas {
 }
 
 .character:last-child{
-  /* border: 2px solid pink; */
+  border: 2px solid pink;
   word-wrap: break-word;
 }
 
