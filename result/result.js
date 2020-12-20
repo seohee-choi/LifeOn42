@@ -1,17 +1,18 @@
 const canvas = document.getElementById("jsCanvas");
 const userImg = document.querySelector(".character");
 const save = document.querySelector(".jsSave");
-
+const sub = document.querySelector(".js-sub");
 const url = "http://seohee-choi.github.io/LifeOn42";
 
 canvas.width = 500;
 canvas.height = 500;
+const ACCNUM = 13;
 
 function share(title) {
 	if (navigator.share) {
-		navigator.share({ title: title, text: `지금 바로 당신의 42 성향을 알아보세요!! ${url}` });
+		navigator.share({ title: title, text: `42서울 속 당신의 모습을 지금 알아보세요🎈 ${url}` });
 	} else {
-		alert('지원하지 않는 브라우저입니다.');
+		alert('지원하지 않는 브라우저입니다');
 	}
 }
 
@@ -65,30 +66,36 @@ function handleImage(callback) {
 	workCanvas.height = 500;
 
 	let imagesOk = 0;
-	let bgimg = new Image();
+	const bgimg = new Image();
 	bgimg.src = imgURLs[imgURLs.length - 1];
 	bgimg.onload = function () {
 		workContext.drawImage(bgimg, 0, 0);
-		let image = new Image();
-		image.src = imgURLs[0];
-		image.onload = () => {
-			workContext.drawImage(image, 0, 0);
-			for (let i = 1; i < imgURLs.length - 1; i++) {
-				let image = new Image();
-				image.src = imgURLs[i];
-				image.onload = function () {
-					//요소의 로딩시간이 길어지면 다른 요소가 로딩되지 않는 현상이 발생했습니다.
-					//해당 문제를 해결하기 위해 콜백, 클래스, 온로드 등 여러가지 시도를 해보았으나 실패했습니다.
-					workContext.drawImage(image, 0, 0);
-					imagesOk++;
-					if (imagesOk >= imgURLs.length - 2) {
-						callback(workCanvas);
+		const defaultimage = new Image();
+		defaultimage.src = imgURLs[0];
+		defaultimage.onload = () => {
+			workContext.drawImage(defaultimage, 0, 0);
+
+			const accURL = Math.floor(Math.random() * ACCNUM + 1);
+			let image = new Image();
+			image.src = `../pic/accessory/${accURL}.png`;
+			image.onload = () => {
+				workContext.drawImage(image, 0, 0);
+				for (let i = 1; i < imgURLs.length - 1; i++) {
+					let image = new Image();
+					image.src = imgURLs[i];
+					image.onload = function () {
+						//요소의 로딩시간이 길어지면 다른 요소가 로딩되지 않는 현상이 발생했습니다.
+						//해당 문제를 해결하기 위해 콜백, 클래스, 온로드 등 여러가지 시도를 해보았으나 실패했습니다.
+						workContext.drawImage(image, 0, 0);
+						imagesOk++;
+						if (imagesOk >= imgURLs.length - 2) {
+							callback(workCanvas);
+						}
 					}
 				}
 			}
 		}
 	}
-
 }
 
 function drawCanvas(workCanvas) {
@@ -97,16 +104,38 @@ function drawCanvas(workCanvas) {
 	if (location.href.indexOf('#') == -1)
 		location.replace(location.href + '?#');
 }
+
+function calcResult(resultVal) {
+	if (resultVal < 7)
+		return -1;
+	else if (resultVal >= 7 || resultVal < 12)
+		return 0;
+	else if (resultVal >= 12 || resultVal < 17)
+		return 1;
+	else if (resultVal >= 17 || resultVal < 22)
+		return 2;
+	else if (resultVal >= 21 || resultVal < 26)
+		return 3;
+	else if (resultVal >= 25 || resultVal < 29)
+		return 4;
+	else if (resultVal >= 29)
+		return -1;
+}
+
 function getResultVal() {
 	const resultVal = localStorage.getItem("valNum");
-	console.log(resultVal);
+	const resultIdx = calcResult(resultVal);
+	console.log(resultVal, exList[resultIdx]);
+	const subMain = sub.querySelector(".submain");
+	const subsub = sub.querySelector(".subsub");
+	subMain.innerText = `${exList[resultIdx].t} 타입`;
+	subsub.innerText = `${exList[resultIdx].s}`;
 	return resultVal;
 }
 
 function handleResult() {
 	const resultVal = getResultVal();
-	console.log(resultVal);
-}
+}	// resultVal을 선언한 이유는?
 
 function init() {
 	getUserName();
