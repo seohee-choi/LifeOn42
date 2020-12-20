@@ -5,11 +5,24 @@ body {
   width: auto;
 }
 
-header {
+/* header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 5%;
+} */
+
+section {
+  border: 2px solid yellowgreen;
+}
+
+section:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #212131;
+  color: aliceblue;
+  font-size: 30px;
 }
 
 canvas {
@@ -26,12 +39,12 @@ canvas {
 }
 
 .title {
-  margin: 30px;
-  font-size: 25pt;
+  margin: 50px;
+  font-size: 30pt;
   font-family: "Russo One", sans-serif;
 }
 
-.main {
+.resultPic {
   width: 100%;
   height: 100%;
   max-width: 1000px;
@@ -41,6 +54,7 @@ canvas {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .character {
@@ -135,7 +149,7 @@ i {
 }
 
 .name {
-  /* border: 2px solid green; */
+  border: 2px solid blueviolet;
   display: flex;
   justify-content: center;
   align-items: center;
