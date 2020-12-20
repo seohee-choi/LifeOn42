@@ -71,10 +71,8 @@ function handleNext(event) {
     if (chooseBox[i].classList[1] === "clicked") {
       chooseBox[i].classList.remove("clicked");
       userVal.push(i);
-      // console.log(userVal.length);
       if (userVal.length !== 1) {
-        resultVal += parseInt(scoreArr[userVal.length - 1][i]);
-        console.log(scoreArr[userVal.length - 1][i], i, Array.isArray(scoreArr[userVal.length]));
+        resultVal += parseInt(scoreArr[userVal.length - 1].result[i]);
       }
       break;
     }
