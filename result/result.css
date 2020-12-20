@@ -3,17 +3,8 @@
 html,
 body {
   width: auto;
-}
-
-/* header {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 5%;
-} */
-
-section {
-  border: 2px solid yellowgreen;
+  /* background: #D9E5FF; */
+  /* background: #E8FFFF; */
 }
 
 section:nth-child(2) {
@@ -49,7 +40,7 @@ canvas {
   height: 100%;
   max-width: 1000px;
   max-height: 1000px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -68,7 +59,7 @@ canvas {
 }
 
 .character:last-child{
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
   word-wrap: break-word;
 }
 
@@ -87,10 +78,6 @@ canvas {
   margin-bottom: 30px;
 }
 
-/* .Btns :last-child {
-  border: 2px solid orange;
-} */
-
 button {
   position: relative;
   width: 150px;
@@ -100,7 +87,6 @@ button {
   outline: 0;
   border-radius: 8px;
 }
-
 
 i {
   font-size: 20px;
@@ -131,13 +117,18 @@ i {
   align-items: center;
   /* border: 2px solid yellow; */
   padding: 30px;
-  /* margin-bottom: 40px; */
 }
 
 .discription {
   display: flex;
   justify-content: space-around;
   padding: 20px 0px;
+}
+
+.discription:last-child {
+  /* border: 2px solid blue; */
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .txt {
@@ -150,10 +141,9 @@ i {
   font-size: small;
 }
 
-#developers {
+/* #developers {
   border: 2px solid brown;
-
-}
+} */
 
 .dev {
   margin: 20px 0px;
@@ -162,8 +152,23 @@ i {
 }
 
 .creater {
-  border: 2px dashed red;
+  width: 280px;
+  height: 150px;
+  border: 2px solid orange;
   padding: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.creater:last-child {
+  /* border: 2px solid red; */
+  margin-left: 100px;
+}
+
+img {
+  border: 2px solid burlywood;
 }
 
 .name {
@@ -171,15 +176,22 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* font-family: 'Nanum Gothic', sans-serif; */
   font-family: "Russo One", sans-serif;
+  margin-top: 10px;
+}
+
+#ifkakao {
+  border: 2px solid #272727;
+  background:#272727;
+  color: aliceblue;
 }
 
 h3 {
-  /* border: 2px solid salmon; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0px 50px 0px;
+  margin: 30px 0px;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: small;
 }
