@@ -3,8 +3,6 @@
 html,
 body {
   width: auto;
-  /* background: #D9E5FF; */
-  /* background: #E8FFFF; */
 }
 
 section:nth-child(2) {
@@ -54,13 +52,43 @@ canvas {
 }
 
 .character :first-child {
-  /* border: 2px solid red; */
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 .character:last-child{
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
+  background:rgb(0, 5, 26);
+  padding: 30px;
+  border-radius: 20px;
   word-wrap: break-word;
+}
+
+.submain, .subsub {
+  /* border: 2px solid red; */
+  width: 100%;
+  color: whitesmoke;
+  font-family: 'Nanum Gothic', sans-serif;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.submain {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2.3vw;
+  line-height: 3vw;
+  margin-bottom: 20px;
+}
+
+.subsub {
+  background: #00afb1;
+  /* border: 2px solid blue; */
+  line-height: 1.7vw;
+  border-radius: 20px;
+  word-wrap: break-word;
+  /* padding: 10px; */
 }
 
 .canvas {
@@ -128,17 +156,18 @@ i {
 .discription:last-child {
   /* border: 2px solid blue; */
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .txt {
   padding: 20px 10px 5px 10px;
   font-family: 'Nanum Gothic', sans-serif;
-  line-height: 25px;
+  line-height: 45px;
 }
 
 .txt:last-child {
   font-size: small;
+  line-height: 25px;
 }
 
 /* #developers {
@@ -154,8 +183,8 @@ i {
 .creater {
   width: 280px;
   height: 150px;
-  border: 2px solid orange;
-  padding: 13px;
+  border: 3px dashed orange;
+  padding: 13px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,16 +196,15 @@ i {
   margin-left: 100px;
 }
 
-img {
+/* img {
   border: 2px solid burlywood;
-}
+} */
 
 .name {
-  border: 2px solid blueviolet;
+  /* border: 2px solid rgb(150, 142, 156); */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-family: 'Nanum Gothic', sans-serif; */
   font-family: "Russo One", sans-serif;
   margin-top: 10px;
 }
@@ -187,11 +215,14 @@ img {
   color: aliceblue;
 }
 
-h3 {
+h2, h4 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 30px 0px;
   font-family: 'Nanum Gothic', sans-serif;
+}
+
+h4 {
   font-size: small;
 }

@@ -32,20 +32,18 @@ body {
 }
 
 .subtitle {
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 200px ;
   font-family: 'Nanum Gothic Coding', "Russo One";
-
+  font-weight: 800;
   margin-top: 1%;
   margin-bottom: 15px;
 
 }
 .user {
   font-family: "Russo One", 'Nanum Gothic Coding';
-
   background-color: transparent;
   text-align: center;
   font-size: 5vmin;
