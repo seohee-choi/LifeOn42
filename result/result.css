@@ -73,28 +73,34 @@ canvas {
 }
 
 .canvas {
-  /* border: 2px solid pink; */
   box-sizing: border-box;
 }
 
 .Btns {
-  width: 300px;
+  /* border: 2px solid pink; */
+  width: 400px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin: 30px 0px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
+
+/* .Btns :last-child {
+  border: 2px solid orange;
+} */
 
 button {
   position: relative;
-  width: 100px;
+  width: 150px;
   height: 70px;
   background-color: #00afb1;
   border: 0;
   outline: 0;
   border-radius: 8px;
 }
+
 
 i {
   font-size: 20px;
@@ -103,7 +109,7 @@ i {
 
 .exBtn {
   margin-top: 8px;
-  font-size: small;
+  font-size: medium;
   font-family: "Russo One", sans-serif;
   letter-spacing: 1.5px;
 }
@@ -113,17 +119,19 @@ i {
   font-size: 23px;
 }
 
+.fab {
+  margin-left: 10px;
+}
+
 .explain {
   width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid green;
-  margin-bottom: 40px;
-}
-
-.fab {
-  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid yellow; */
+  padding: 30px;
+  /* margin-bottom: 40px; */
 }
 
 .discription {
@@ -138,7 +146,17 @@ i {
   line-height: 25px;
 }
 
+.txt:last-child {
+  font-size: small;
+}
+
+#developers {
+  border: 2px solid brown;
+
+}
+
 .dev {
+  margin: 20px 0px;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 20px;
 }
@@ -154,4 +172,14 @@ i {
   justify-content: center;
   align-items: center;
   font-family: "Russo One", sans-serif;
+}
+
+h3 {
+  /* border: 2px solid salmon; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px 50px 0px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: small;
 }
