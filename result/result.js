@@ -150,13 +150,16 @@ function init() {
 	}
 }
 
-const res = document.querySelector(".result");
-
+const bodyDiv = document.querySelector(".bodyDiv");
+const loadingBox = document.querySelector(".loadingPage");
 document.addEventListener("DOMContentLoaded", () => {
 	if (location.href.indexOf('#') == -1)
-		res.style.display = "none";
+	{
+		loadingBox.style.display = "";
+		bodyDiv.style.display = "none";
+	}
 	window.onload = () => {
 		init();
 	};
-}
+	}
 );
