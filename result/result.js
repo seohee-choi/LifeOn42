@@ -128,17 +128,17 @@ function calcResult(resultVal) {
 
 function getResultVal() {
 	const resultVal = localStorage.getItem("valNum");
-	const resultIdx = calcResult(parseInt(resultVal));
-	const subMain = sub.querySelector(".submain");
-	const subsub = sub.querySelector(".subsub");
-	subMain.innerText = `${exList[resultIdx].t} 타입`;
-	subsub.innerText = `${exList[resultIdx].s}`;
 	return resultVal;
 }
 
 function handleResult() {
 	const resultVal = getResultVal();
-}	// resultVal을 선언한 이유는?
+	const resultIdx = calcResult(parseInt(resultVal));
+	const subMain = sub.querySelector(".submain");
+	const subsub = sub.querySelector(".subsub");
+	subMain.innerText = `${exList[resultIdx].t} 타입`;
+	subsub.innerText = `${exList[resultIdx].s}`;
+}
 
 function init() {
 	getUserName();
