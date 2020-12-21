@@ -29,6 +29,7 @@ body {
   font-size: 18vmin;
   color: black;
   font-family: "Russo One", sans-serif;
+  text-shadow: 5px 5px 5px darkgrey;
 }
 
 .subtitle {
@@ -70,6 +71,7 @@ button {
   outline: 0;
   cursor: pointer;
   color: white;
+  box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35);
   font-family: "Russo One", sans-serif;
 }
 

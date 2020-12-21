@@ -1,7 +1,10 @@
+const bodyDiv = document.querySelector(".bodyDiv");
+const loadingBox = document.querySelector(".loadingPage");
 const canvas = document.getElementById("jsCanvas");
 const userImg = document.querySelector(".character");
 const save = document.querySelector(".jsSave");
 const sub = document.querySelector(".js-sub");
+const Return = document.querySelector(".js-button");
 const url = "http://seohee-choi.github.io/LifeOn42";
 
 canvas.width = 500;
@@ -136,8 +139,12 @@ function handleResult() {
 	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
-	subMain.innerText = `${exList[resultIdx].t} 타입`;
+	subMain.innerText = `Lv.${resultIdx} ${exList[resultIdx].t}`;
 	subsub.innerText = `${exList[resultIdx].s}`;
+}
+
+function againTest() {
+	location.href = "https://seohee-choi.github.io/LifeOn42/";
 }
 
 function init() {
@@ -149,8 +156,6 @@ function init() {
 	}
 }
 
-const bodyDiv = document.querySelector(".bodyDiv");
-const loadingBox = document.querySelector(".loadingPage");
 document.addEventListener("DOMContentLoaded", () => {
 	if (location.href.indexOf('#') == -1) {
 		loadingBox.style.display = "";
