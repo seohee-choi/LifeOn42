@@ -21,7 +21,6 @@ canvas {
 
 .result {
   border: 2px solid red;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,18 +32,15 @@ canvas {
 .title {
   margin: 50px;
   font-size: 30pt;
-  font-family: "Russo One", sans-serif;
+  font-family: "Russo One", 'Nanum Gothic';
   line-height: 47px;
 }
 
-
 .resultPic {
-  max-width: 900px;
+  max-width: 1100px;
   width: 100%;
   height: 500px;
-  /* max-width: 100%;
-  max-height: 100%; */
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -52,40 +48,32 @@ canvas {
   margin-bottom: 100px;
 }
 
-@media (max-width: 900px)
+@media (max-width: 1050px)
 {
-   .resultPic{
+   .resultPic{    
     flex-direction: column;
     height: 800px;
   }
 }
+
 .character {
   width: auto;
   height: auto;
   /* border: 2px solid blue; */
-  /* width: 100%;
-  height: 100%; */
 }
 
-/* .character :first-child {
-  margin-right: 80px;
-} */
-
 .character:last-child{
-  width: 400px;
-  height: auto;
+  width: 440px;
+  height: 440px;
   /* border: 2px solid yellow; */
-  background:rgb(0, 5, 26);
-  margin-top: 5vh;
+  border: 3px solid rgb(0, 5, 26);
   padding: 30px;
-  /* border-radius: 20px; */
   word-wrap: break-word;
 }
 
 .submain, .subsub {
   /* border: 2px solid red; */
   width: 100%;
-  color: whitesmoke;
   font-family: 'Nanum Gothic', sans-serif;
   overflow: auto;
   display: flex;
@@ -98,23 +86,18 @@ canvas {
   font-weight: bold;
   color: black;
   background-color: #00afb1;
-
-  font-size: 2.3vw;
-  line-height: 3vw;
+  font-size: 30px;
+  line-height: 50px;
   margin-bottom: 20px;
 }
 
 .subsub {
-  /* width: 50%; */
   /* background: #00afb1; */
   line-height: 27px;
-  /* border-radius: 20px; */
   word-wrap: break-word;
-  /* padding: 10px; */
 }
 
 .canvas {
-
   box-sizing: border-box;
 }
 
@@ -179,7 +162,7 @@ i {
 .discription:last-child {
   /* border: 2px solid blue; */
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .txt {
@@ -211,7 +194,6 @@ i {
   padding: 13px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -223,24 +205,20 @@ i {
 
 img {
   position: absolute;
-  /* border: 2px solid burlywood; */
-  margin-bottom: 40px;
+  border: 2px solid burlywood;
+  /* margin-bottom: 100px; */
 }
 
 .name {
   position: absolute;
   border: 2px solid rgb(150, 142, 156);
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  
-  padding: 10px 0px 10px 35px;
+  padding: 10px 0px 10px 10px;
   font-family: "Russo One", sans-serif;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 #ifkakao {
-  border: 2px solid #272727;
+  /* border: 2px solid #272727; */
   background:#272727;
   color: aliceblue;
 }
@@ -253,10 +231,6 @@ h2, h4 {
   line-height: 25px;
   font-family: 'Nanum Gothic', sans-serif;
 }
-
-/* h2 {
-  border: 2px solid rgb(150, 142, 156);
-} */
 
 h4 {
   font-size: small;
