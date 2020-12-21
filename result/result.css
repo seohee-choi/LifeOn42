@@ -59,13 +59,6 @@ canvas {
   margin-bottom: 100px;
 }
 
-@media (max-width: 1050px)
-{
-   .resultPic{    
-    flex-direction: column;
-    height: 800px;
-  }
-}
 
 .character {
   width: auto;
@@ -80,10 +73,12 @@ canvas {
   border-radius: 5%;
   box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35);
   /* border: 2px solid yellow; */
-  /* border: 3px solid rgb(0, 5, 26); */
+  border: 4px solid rgb(0, 5, 26);
   padding: 30px;
   word-wrap: break-word;
 }
+
+
 
 .submain, .subsub {
   /* border: 2px solid red; */
@@ -112,7 +107,65 @@ canvas {
   line-height: 30px;
   /* word-wrap: break-word; */
 }
+@media (max-width: 1050px)
+{
+   .resultPic{    
+    flex-direction: column;
+    height: 850px;
+  }
 
+  canvas{
+  box-shadow: none;
+
+  }
+  .character:last-child{
+    margin-top:30px;
+    margin-bottom:30px;
+
+    width: 440px;
+  }
+}
+
+@media (max-width: 550px)
+{
+  .resultPic{
+    height: 800px;
+  }
+  canvas{    
+    width: 400px;
+  }
+  .character:last-child{
+    width: 340px;
+  }
+}
+
+@media (max-width: 430px)
+{
+  canvas{    
+    width: 350px;
+  }
+  .character:last-child{
+    width: 290px;
+
+  }
+
+  .submain {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 370px)
+{
+  canvas{    
+    width: 300px;
+  }
+  .character:last-child{
+    width: 240px;
+  }
+  .submain {
+    font-size: 20px;
+  }
+  }
 .canvas {
   box-sizing: border-box;
 }
@@ -162,6 +215,7 @@ i {
 }
 
 .explain {
+  
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -185,6 +239,8 @@ i {
 
 .txt {
   padding: 20px 10px 5px 10px;
+  word-break:keep-all;
+
   font-family: 'Nanum Gothic', sans-serif;
   line-height: 45px;
 }
