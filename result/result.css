@@ -20,11 +20,13 @@ canvas {
 }
 
 .result {
+  border: 2px solid red;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -35,19 +37,28 @@ canvas {
   line-height: 47px;
 }
 
+
 .resultPic {
+  max-width: 900px;
   width: 100%;
-  height: 100%;
+  height: 500px;
   /* max-width: 100%;
   max-height: 100%; */
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
 }
 
+@media (max-width: 900px)
+{
+   .resultPic{
+    flex-direction: column;
+    height: 800px;
+  }
+}
 .character {
   width: auto;
   height: auto;
@@ -67,7 +78,7 @@ canvas {
   background:rgb(0, 5, 26);
   margin-top: 5vh;
   padding: 30px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   word-wrap: break-word;
 }
 
@@ -85,6 +96,9 @@ canvas {
   display: flex;
   justify-content: center;
   font-weight: bold;
+  color: black;
+  background-color: #00afb1;
+
   font-size: 2.3vw;
   line-height: 3vw;
   margin-bottom: 20px;
@@ -92,9 +106,9 @@ canvas {
 
 .subsub {
   /* width: 50%; */
-  background: #00afb1;
+  /* background: #00afb1; */
   line-height: 27px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   word-wrap: break-word;
   /* padding: 10px; */
 }
