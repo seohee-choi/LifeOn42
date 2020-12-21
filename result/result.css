@@ -15,6 +15,14 @@ section:nth-child(2) {
   font-size: 30px;
 }
 
+section:last-child {
+  border-inline:5px dotted brown;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 canvas {
   border: 3px solid black;
 }
@@ -120,6 +128,7 @@ button {
   border: 0;
   outline: 0;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 i {
@@ -135,7 +144,7 @@ i {
 }
 
 .fas {
-  color: white;
+  color: aliceblue;
   font-size: 23px;
 }
 
@@ -188,14 +197,17 @@ i {
 }
 
 .creater {
-  width: 250px;
-  height: 250px;
-  border: 3px dashed orange;
+  width: 200px;
+  height: 230px;
+  background:#fff;
   padding: 13px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  box-shadow:1px 1px 5px #333;
+  -webkit-box-shadow:1px 1px 5px #333;
+  -moz-box-shadow:1px 1px 5px #333;
 }
 
 .creater:last-child {
@@ -204,17 +216,21 @@ i {
 }
 
 img {
-  position: absolute;
-  border: 2px solid burlywood;
+  /* position: absolute; */
+  /* border: 2px solid burlywood; */
+  background: #333;
   /* margin-bottom: 100px; */
 }
 
 .name {
   position: absolute;
-  border: 2px solid rgb(150, 142, 156);
+  /* border: 1px solid rgb(150, 142, 156); */
   padding: 10px 0px 10px 10px;
   font-family: "Russo One", sans-serif;
-  margin-top: 200px;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 175px;
+  
 }
 
 #ifkakao {
@@ -223,7 +239,7 @@ img {
   color: aliceblue;
 }
 
-h2, h4 {
+h2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,6 +248,12 @@ h2, h4 {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-h4 {
-  font-size: small;
+.Return {
+  /* background-color: blueviolet; */
+  font-family: 'Nanum Gothic', sans-serif;
+  color: aliceblue;
+  margin-bottom: 35px;
+  /* width: 200px; */
+  height: 45px;
+  
 }
