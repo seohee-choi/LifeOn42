@@ -191,8 +191,8 @@ i {
 }
 
 .creater {
-  width: 200px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   border: 3px dashed orange;
   padding: 13px 0px;
   display: flex;
