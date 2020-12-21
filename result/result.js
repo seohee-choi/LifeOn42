@@ -139,7 +139,7 @@ function handleResult() {
 	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
-	subMain.innerText = `${exList[resultIdx].t} 타입`;
+	subMain.innerText = `Lv.${resultIdx} ${exList[resultIdx].t}`;
 	subsub.innerText = `${exList[resultIdx].s}`;
 }
 
