@@ -29,6 +29,7 @@ body {
   font-size: 18vmin;
   color: black;
   font-family: "Russo One", sans-serif;
+  text-shadow: 5px 5px 5px darkgrey;
 }
 
 .subtitle {
