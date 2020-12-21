@@ -6,7 +6,6 @@ const url = "http://seohee-choi.github.io/LifeOn42";
 
 canvas.width = 500;
 canvas.height = 500;
-const ACCNUM = 13;
 
 function share(title) {
 	if (navigator.share) {
@@ -34,6 +33,11 @@ function getUserName() {
 	if (userName) {
 		paintUserName(userName);
 	}
+}
+
+function getAccNbr() {
+	const accNbr = localStorage.getItem("valAcc");
+	return accNbr
 }
 
 function getUserVal() {
@@ -75,9 +79,9 @@ function handleImage(callback) {
 		defaultimage.onload = () => {
 			workContext.drawImage(defaultimage, 0, 0);
 
-			const accURL = Math.floor(Math.random() * ACCNUM + 1);
+			const accNbr = getAccNbr();
 			let image = new Image();
-			image.src = `../pic/accessory/${accURL}.png`;
+			image.src = `../pic/accessory/${accNbr}.png`;
 			image.onload = () => {
 				workContext.drawImage(image, 0, 0);
 				for (let i = 1; i < imgURLs.length - 1; i++) {
@@ -108,15 +112,15 @@ function drawCanvas(workCanvas) {
 function calcResult(resultVal) {
 	if (resultVal < 7)
 		return -1;
-	else if (resultVal >= 7 || resultVal < 12)
+	else if (resultVal >= 7 && resultVal < 12)
 		return 0;
-	else if (resultVal >= 12 || resultVal < 17)
+	else if (resultVal >= 12 && resultVal < 17)
 		return 1;
-	else if (resultVal >= 17 || resultVal < 22)
+	else if (resultVal >= 17 && resultVal < 22)
 		return 2;
-	else if (resultVal >= 21 || resultVal < 26)
+	else if (resultVal >= 21 && resultVal < 26)
 		return 3;
-	else if (resultVal >= 25 || resultVal < 29)
+	else if (resultVal >= 25 && resultVal < 29)
 		return 4;
 	else if (resultVal >= 29)
 		return -1;
@@ -124,8 +128,7 @@ function calcResult(resultVal) {
 
 function getResultVal() {
 	const resultVal = localStorage.getItem("valNum");
-	const resultIdx = calcResult(resultVal);
-	console.log(resultVal, exList[resultIdx]);
+	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
 	subMain.innerText = `${exList[resultIdx].t} 타입`;
@@ -146,11 +149,13 @@ function init() {
 	}
 }
 
-const res = document.querySelector(".result");
-
+const bodyDiv = document.querySelector(".bodyDiv");
+const loadingBox = document.querySelector(".loadingPage");
 document.addEventListener("DOMContentLoaded", () => {
-	if (location.href.indexOf('#') == -1)
-		res.style.display = "none";
+	if (location.href.indexOf('#') == -1) {
+		loadingBox.style.display = "";
+		bodyDiv.style.display = "none";
+	}
 	window.onload = () => {
 		init();
 	};
