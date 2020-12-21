@@ -31,13 +31,14 @@ canvas {
   margin: 50px;
   font-size: 30pt;
   font-family: "Russo One", sans-serif;
+  line-height: 47px;
 }
 
 .resultPic {
   width: 100%;
   height: 100%;
-  max-width: 1000px;
-  max-height: 1000px;
+  max-width: 100%;
+  max-height: 100%;
   /* border: 2px solid blue; */
   display: flex;
   flex-direction: row;
@@ -100,7 +101,7 @@ canvas {
   width: 400px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
   margin-top: 40px;
   margin-bottom: 30px;
@@ -175,38 +176,45 @@ i {
 } */
 
 .dev {
+  border: 2px solid red;
   margin: 20px 0px;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 20px;
 }
 
 .creater {
-  width: 280px;
-  height: 150px;
+  width: 200px;
+  height: 180px;
   border: 3px dashed orange;
   padding: 13px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .creater:last-child {
   /* border: 2px solid red; */
-  margin-left: 100px;
+  margin-left: 5vw;
 }
 
-/* img {
-  border: 2px solid burlywood;
-} */
+img {
+  position: absolute;
+  /* border: 2px solid burlywood; */
+  margin-bottom: 40px;
+}
 
 .name {
-  /* border: 2px solid rgb(150, 142, 156); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  border: 2px solid rgb(150, 142, 156);
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  
+  padding: 10px 0px 10px 35px;
   font-family: "Russo One", sans-serif;
-  margin-top: 10px;
+  margin-top: 150px;
 }
 
 #ifkakao {
@@ -219,9 +227,14 @@ h2, h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0px;
+  margin: 30px 50px;
+  line-height: 25px;
   font-family: 'Nanum Gothic', sans-serif;
 }
+
+/* h2 {
+  border: 2px solid rgb(150, 142, 156);
+} */
 
 h4 {
   font-size: small;
