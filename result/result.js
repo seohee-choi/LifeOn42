@@ -112,15 +112,15 @@ function drawCanvas(workCanvas) {
 function calcResult(resultVal) {
 	if (resultVal < 7)
 		return -1;
-	else if (resultVal >= 7 || resultVal < 12)
+	else if (resultVal >= 7 && resultVal < 12)
 		return 0;
-	else if (resultVal >= 12 || resultVal < 17)
+	else if (resultVal >= 12 && resultVal < 17)
 		return 1;
-	else if (resultVal >= 17 || resultVal < 22)
+	else if (resultVal >= 17 && resultVal < 22)
 		return 2;
-	else if (resultVal >= 21 || resultVal < 26)
+	else if (resultVal >= 21 && resultVal < 26)
 		return 3;
-	else if (resultVal >= 25 || resultVal < 29)
+	else if (resultVal >= 25 && resultVal < 29)
 		return 4;
 	else if (resultVal >= 29)
 		return -1;
@@ -128,8 +128,7 @@ function calcResult(resultVal) {
 
 function getResultVal() {
 	const resultVal = localStorage.getItem("valNum");
-	const resultIdx = calcResult(resultVal);
-	console.log(resultVal, exList[resultIdx]);
+	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
 	subMain.innerText = `${exList[resultIdx].t} 타입`;
@@ -153,13 +152,12 @@ function init() {
 const bodyDiv = document.querySelector(".bodyDiv");
 const loadingBox = document.querySelector(".loadingPage");
 document.addEventListener("DOMContentLoaded", () => {
-	if (location.href.indexOf('#') == -1)
-	{
+	if (location.href.indexOf('#') == -1) {
 		loadingBox.style.display = "";
 		bodyDiv.style.display = "none";
 	}
 	window.onload = () => {
 		init();
 	};
-	}
+}
 );
