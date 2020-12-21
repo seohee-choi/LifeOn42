@@ -6,7 +6,6 @@ const url = "http://seohee-choi.github.io/LifeOn42";
 
 canvas.width = 500;
 canvas.height = 500;
-const ACCNUM = 13;
 
 function share(title) {
 	if (navigator.share) {
@@ -34,6 +33,11 @@ function getUserName() {
 	if (userName) {
 		paintUserName(userName);
 	}
+}
+
+function getAccNbr() {
+	const accNbr = localStorage.getItem("valAcc");
+	return accNbr
 }
 
 function getUserVal() {
@@ -75,9 +79,9 @@ function handleImage(callback) {
 		defaultimage.onload = () => {
 			workContext.drawImage(defaultimage, 0, 0);
 
-			const accURL = Math.floor(Math.random() * ACCNUM + 1);
+			const accNbr = getAccNbr();
 			let image = new Image();
-			image.src = `../pic/accessory/${accURL}.png`;
+			image.src = `../pic/accessory/${accNbr}.png`;
 			image.onload = () => {
 				workContext.drawImage(image, 0, 0);
 				for (let i = 1; i < imgURLs.length - 1; i++) {
