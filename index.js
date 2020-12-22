@@ -6,7 +6,7 @@ function qnaStart() {
   const userName = userInput.value;
   const alertName = document.querySelector(".alertName");
   if (userName < 1) {
-    alertName.innerText = "Write your name ☝";
+    alertName.innerText = "필수 입력입니다☝";
     alertName.style.fontFamily = 'Russo One', sans - serif;
   } else {
     localStorage.setItem("userName", userName);
