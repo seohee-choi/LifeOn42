@@ -12,7 +12,7 @@ canvas.height = 500;
 
 function share(title) {
 	if (navigator.share) {
-		navigator.share({ title: title, text: `42서울 속 당신의 모습을 지금 알아보세요🎈 ${url}` });
+		navigator.share({ title: title, text: "42서울 속 당신의 모습을 지금 알아보세요🎈", url: `${url}` });
 	} else {
 		alert('지원하지 않는 브라우저입니다');
 	}
@@ -77,7 +77,7 @@ function handleImage(callback) {
 	bgimg.src = imgURLs[imgURLs.length - 1];
 	bgimg.onload = function () {
 		workContext.drawImage(bgimg, 0, 0);
-		
+
 		let defaultimage = new Image();
 		defaultimage.src = imgURLs[0];
 		defaultimage.onload = () => {
@@ -87,7 +87,7 @@ function handleImage(callback) {
 			guildImg.src = imgURLs[1];
 			guildImg.onload = () => {
 				workContext.drawImage(guildImg, 0, 0);
-	
+
 				const accNbr = getAccNbr();
 				let image = new Image();
 				image.src = `../pic/accessory/${accNbr}.png`;
