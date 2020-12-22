@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #F5F5F7;
 }
 
 .midBox {
@@ -15,7 +16,6 @@ body {
   height: 50%;
   display: flex;
   justify-content: center;
-  align-content: space-between;
   flex-direction: column;
   align-items: center;
 }
@@ -36,43 +36,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px ;
-  font-family: 'Nanum Gothic Coding', "Russo One";
+  font-family: 'Nanum Gothic', "Russo One";
   font-weight: 800;
   margin-top: 1%;
   margin-bottom: 15px;
-
+  font-size: 3.5vmin;
+  text-shadow: 3px 3px 3px darkgrey;
 }
+
 .user {
-  font-family: "Russo One", 'Nanum Gothic Coding';
+  font-family: "Russo One", 'Nanum Gothic';
+  margin-top: 40px;
   background-color: transparent;
   text-align: center;
-  font-size: 5vmin;
+  font-size: 4vmin;
   padding-bottom: 5px;
   border: 0;
   outline: 0;
 }
 
 input::placeholder {
-  font-family: "Russo One", sans-serif;
+  font-family:'Nanum Gothic', sans-serif;
 }
 
 button {
-  -webkit-tap-highlight-color: transparent; 
-  padding: 1vh 2vh;
-  display: flex;
-  margin: 3%;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  background-color: #00afb1;
-  font-size: 5vh;
+  background: #00afb1;
   border: 0;
   outline: 0;
   cursor: pointer;
-  color: white;
-  box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35);
-  font-family: "Russo One", sans-serif;
+  font-family: 'Nanum Gothic';
+  color: #fff;
+  display: inline-block;
+  min-width: 28px;
+  padding: 18px 23px;
+  border-radius: 28px;
+  margin-top: 32px;
 }
 
 button:active{
