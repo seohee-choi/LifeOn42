@@ -4,6 +4,7 @@ html,
 body {
   width: auto;
   min-width: 320px;
+  background: #F5F5F7;
 }
 
 section:nth-child(2) {
@@ -13,11 +14,9 @@ section:nth-child(2) {
   background: #212131;
   color: aliceblue;
   font-size: 30px;
-  /* position: relative; */
 }
 
 section:last-child {
-  /* border-inline:5px dotted brown; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,11 +26,9 @@ section:last-child {
 canvas {
   border: 4px solid black;
   border-radius: 5%;
-  /* box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35); */
 }
 
 .result {
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +48,6 @@ canvas {
   max-width: 1100px;
   width: 100%;
   height: 500px;
-  /* border: 2px solid blue; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -59,27 +55,21 @@ canvas {
   margin-bottom: 100px;
 }
 
-
 .character {
   width: auto;
   height: auto;
-  
-  /* border: 2px solid blue; */
 }
 
 .character:last-child{
   width: 400px;
   height: 440px;
   border-radius: 4%;
-  /* box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35); */
-  /* border: 2px solid yellow; */
   border: 4px solid rgb(0, 5, 26);
   padding: 30px;
   word-wrap: break-word;
 }
 
 .submain, .subsub {
-  /* border: 2px solid red; */
   width: 100%;
   font-family: 'Nanum Gothic', sans-serif;
   overflow: auto;
@@ -101,9 +91,7 @@ canvas {
 }
 
 .subsub {
-  /* background: #00afb1; */
   line-height: 30px;
-  /* word-wrap: break-word; */
 }
 
 @media (max-width: 1050px)
@@ -178,8 +166,6 @@ canvas {
 }
 
 .Btns {
-  /* border: 2px solid pink; */
-  /* position: absolute; */
   width: 100vw;
   max-width: 400px;
   display: flex;
@@ -200,7 +186,6 @@ button {
   outline: 0;
   border-radius: 8px;
   cursor: pointer;
-  /* box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35); */
 }
 
 i {
@@ -209,12 +194,9 @@ i {
 }
 
 .exBtn {
-  /* width: 10%; */
   margin-top: 8px;
   font-size: medium;
   font-family: 'Nanum Gothic', sans-serif;
-
-  /* font-family: "Russo One", sans-serif; */
   letter-spacing: 1.5px;
 }
 
@@ -229,7 +211,6 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid yellow; */
   padding: 30px;
 }
 
@@ -240,7 +221,6 @@ i {
 }
 
 .discription:last-child {
-  /* border: 2px solid blue; */
   justify-content: center;
   margin-bottom: 10px;
 }
@@ -250,7 +230,6 @@ i {
   word-break:keep-all;
   font-family: 'Nanum Gothic', sans-serif;
   line-height: 45px;
-  /* max-lines: 3; */
 }
 
 .txt:last-child {
@@ -258,12 +237,7 @@ i {
   line-height: 25px;
 }
 
-/* #developers {
-  border: 2px solid brown;
-} */
-
 .dev {
-  /* border: 2px solid red; */
   margin: 20px 0px;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 20px;
@@ -272,9 +246,6 @@ i {
 .creater {
   width: 60vw;
   height: 230px;
-  /* height: 90vh; */
-  /* height: 150px; */
-  /* min-height: 100px; */
   max-width: 200px;
   background:#fff;
   padding: 13px 0px;
@@ -284,27 +255,18 @@ i {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  /* border: 4px solid black; */
   border-radius: 5%;
-  /* box-shadow:1px 1px 5px #333;
-  -webkit-box-shadow:1px 1px 5px #333;
-  -moz-box-shadow:1px 1px 5px #333; */
 }
 
 .creater:last-child {
-  /* border: 2px solid red; */
   margin-left: 5vw;
 }
 
 img {
   width: 80%;
-  /* height: 60vh; */
   max-width: 165px;
   max-height: 165px;
-  /* position: absolute; */
-  /* border: 0.05px solid black; */
   background:rgb(232, 234, 244);
-  /* margin-bottom: 100px; */
 }
 
 .name {
@@ -314,21 +276,12 @@ img {
   font-family: "Russo One", sans-serif;
   text-align: center;
   line-height: 23px;
-  /* margin-top: 22vh; */
   margin-top: 175px;
-  /* margin-top: 95%; */
   word-break: normal;
-  /* margin-bottom: 0px; */
 }
 
-/* .name { */
-  /* padding-left: 2vw;
-  padding-right: 2vw; */
-  /* border: 2px solid #272727; */
-/* } */
-
 #ifkakao {
-  background:#272727;
+  background:#333333;
   color: aliceblue;
 }
 
@@ -342,11 +295,8 @@ h2 {
 }
 
 .Return {
-  /* background-color: blueviolet; */
-  font-family: 'Nanum Gothic', sans-serif;
   color: aliceblue;
   margin-bottom: 35px;
-  /* width: 200px; */
   height: 45px;
-  
+  font-family: 'Nanum Gothic', sans-serif;
 }
