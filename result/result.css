@@ -3,6 +3,8 @@
 html,
 body {
   width: auto;
+  min-width: 320px;
+  background: #F5F5F7;
 }
 
 section:nth-child(2) {
@@ -14,8 +16,16 @@ section:nth-child(2) {
   font-size: 30px;
 }
 
+section:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 canvas {
-  border: 0.5vh solid black;
+  border: 4px solid black;
+  border-radius: 5%;
 }
 
 .result {
@@ -30,15 +40,14 @@ canvas {
 .title {
   margin: 50px;
   font-size: 30pt;
-  font-family: "Russo One", sans-serif;
+  font-family: "Russo One", 'Nanum Gothic';
+  line-height: 47px;
 }
 
 .resultPic {
+  max-width: 1100px;
   width: 100%;
-  height: 100%;
-  max-width: 1000px;
-  max-height: 1000px;
-  /* border: 2px solid blue; */
+  height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -47,26 +56,21 @@ canvas {
 }
 
 .character {
-  width: 100%;
-  height: 100%;
-}
-
-.character :first-child {
-  margin-right: 80px;
+  width: auto;
+  height: auto;
 }
 
 .character:last-child{
-  /* border: 2px solid pink; */
-  background:rgb(0, 5, 26);
+  width: 400px;
+  height: 440px;
+  border-radius: 4%;
+  border: 4px solid rgb(0, 5, 26);
   padding: 30px;
-  border-radius: 20px;
   word-wrap: break-word;
 }
 
 .submain, .subsub {
-  /* border: 2px solid red; */
   width: 100%;
-  color: whitesmoke;
   font-family: 'Nanum Gothic', sans-serif;
   overflow: auto;
   display: flex;
@@ -77,18 +81,84 @@ canvas {
   display: flex;
   justify-content: center;
   font-weight: bold;
-  font-size: 2.3vw;
-  line-height: 3vw;
+  color: black;
+  background-color: #00afb1;
+  font-size: 30px;
+  line-height: 70px;
   margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35);
 }
 
 .subsub {
-  background: #00afb1;
-  /* border: 2px solid blue; */
-  line-height: 1.7vw;
-  border-radius: 20px;
-  word-wrap: break-word;
-  /* padding: 10px; */
+  line-height: 30px;
+}
+
+@media (max-width: 1050px)
+{
+   .resultPic{    
+    flex-direction: column;
+    height: 850px;
+  }
+
+  canvas{
+  box-shadow: none;
+  }
+
+  .character:last-child{
+    margin-top:30px;
+    margin-bottom:30px;
+    width: 440px;
+  }
+}
+
+@media (max-width: 550px)
+{
+  .resultPic{
+    height: 800px;
+  }
+
+  canvas{    
+    width: 400px;
+  }
+
+  .character:last-child{
+    width: 340px;
+  }
+
+  .creater {
+    width: 170px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 430px)
+{
+  canvas{    
+    width: 350px;
+  }
+
+  .character:last-child{
+    width: 290px;
+  }
+  .submain {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 370px)
+{
+  canvas{    
+    width: 300px;
+  }
+
+  .character:last-child{
+    width: 240px;
+  }
+
+  .submain {
+    font-size: 20px;
+  }
 }
 
 .canvas {
@@ -96,11 +166,11 @@ canvas {
 }
 
 .Btns {
-  /* border: 2px solid pink; */
-  width: 400px;
+  width: 100vw;
+  max-width: 400px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
   margin-top: 40px;
   margin-bottom: 30px;
@@ -108,12 +178,14 @@ canvas {
 
 button {
   position: relative;
-  width: 150px;
+  width: 40vw;
+  max-width: 150px;
   height: 70px;
   background-color: #00afb1;
   border: 0;
   outline: 0;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 i {
@@ -124,17 +196,13 @@ i {
 .exBtn {
   margin-top: 8px;
   font-size: medium;
-  font-family: "Russo One", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   letter-spacing: 1.5px;
 }
 
 .fas {
-  color: white;
+  color: aliceblue;
   font-size: 23px;
-}
-
-.fab {
-  margin-left: 10px;
 }
 
 .explain {
@@ -143,7 +211,6 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid yellow; */
   padding: 30px;
 }
 
@@ -154,13 +221,13 @@ i {
 }
 
 .discription:last-child {
-  /* border: 2px solid blue; */
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .txt {
   padding: 20px 10px 5px 10px;
+  word-break:keep-all;
   font-family: 'Nanum Gothic', sans-serif;
   line-height: 45px;
 }
@@ -170,10 +237,6 @@ i {
   line-height: 25px;
 }
 
-/* #developers {
-  border: 2px solid brown;
-} */
-
 .dev {
   margin: 20px 0px;
   font-family: 'Nanum Gothic', sans-serif;
@@ -181,48 +244,59 @@ i {
 }
 
 .creater {
-  width: 280px;
-  height: 150px;
-  border: 3px dashed orange;
+  width: 60vw;
+  height: 230px;
+  max-width: 200px;
+  background:#fff;
   padding: 13px 0px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 5%;
 }
 
 .creater:last-child {
-  /* border: 2px solid red; */
-  margin-left: 100px;
+  margin-left: 5vw;
 }
 
-/* img {
-  border: 2px solid burlywood;
-} */
+img {
+  width: 80%;
+  max-width: 165px;
+  max-height: 165px;
+  background:rgb(232, 234, 244);
+}
 
 .name {
-  /* border: 2px solid rgb(150, 142, 156); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  border: 1px solid rgb(150, 142, 156);
+  padding: 5px 1.7vw;
   font-family: "Russo One", sans-serif;
-  margin-top: 10px;
+  text-align: center;
+  line-height: 23px;
+  margin-top: 175px;
+  word-break: normal;
 }
 
 #ifkakao {
-  border: 2px solid #272727;
-  background:#272727;
+  background:#333333;
   color: aliceblue;
 }
 
-h2, h4 {
+h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0px;
+  margin: 30px 50px;
+  line-height: 25px;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-h4 {
-  font-size: small;
+.Return {
+  color: aliceblue;
+  margin-bottom: 35px;
+  height: 45px;
+  font-family: 'Nanum Gothic', sans-serif;
 }
