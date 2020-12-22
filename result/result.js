@@ -10,9 +10,9 @@ const url = "http://seohee-choi.github.io/LifeOn42";
 canvas.width = 500;
 canvas.height = 500;
 
-function share(title) {
+function share(url) {
 	if (navigator.share) {
-		navigator.share({ title: title, text: "42서울 속 당신의 모습을 지금 알아보세요🎈", url: `${url}` });
+		navigator.share({ title: "LifeOn42", text: "42서울 속 당신의 모습을 지금 알아보세요🎈" });
 	} else {
 		alert('지원하지 않는 브라우저입니다');
 	}
