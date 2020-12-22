@@ -271,21 +271,24 @@ i {
 
 .creater {
   width: 60vw;
-  height:35vh;
+  height: 230px;
+  /* height: 90vh; */
   /* height: 150px; */
-  min-height: 100px;
+  /* min-height: 100px; */
   max-width: 200px;
-  /* max-height: 230px; */
   background:#fff;
   padding: 13px 0px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   position: relative;
-  box-shadow:1px 1px 5px #333;
+  /* border: 4px solid black; */
+  border-radius: 5%;
+  /* box-shadow:1px 1px 5px #333;
   -webkit-box-shadow:1px 1px 5px #333;
-  -moz-box-shadow:1px 1px 5px #333;
+  -moz-box-shadow:1px 1px 5px #333; */
 }
 
 .creater:last-child {
@@ -294,7 +297,7 @@ i {
 }
 
 img {
-  width: 40vw;
+  width: 80%;
   /* height: 60vh; */
   max-width: 165px;
   max-height: 165px;
@@ -307,22 +310,22 @@ img {
 .name {
   position: absolute;
   border: 1px solid rgb(150, 142, 156);
-  padding: 5px 3vw;
+  padding: 5px 1.7vw;
   font-family: "Russo One", sans-serif;
   text-align: center;
-  line-height: 25px;
+  line-height: 23px;
   /* margin-top: 22vh; */
-  /* margin-top: 175px; */
-  margin-top: 90%;
+  margin-top: 175px;
+  /* margin-top: 95%; */
   word-break: normal;
   /* margin-bottom: 0px; */
 }
 
-.name {
+/* .name { */
   /* padding-left: 2vw;
   padding-right: 2vw; */
   /* border: 2px solid #272727; */
-}
+/* } */
 
 #ifkakao {
   background:#272727;
