@@ -6,8 +6,8 @@ function qnaStart() {
   const userName = userInput.value;
   const alertName = document.querySelector(".alertName");
   if (userName < 1) {
-    alertName.innerText = "필수 입력입니다☝";
-    alertName.style.fontFamily = 'Russo One', sans - serif;
+    alertName.innerText = "필수 입력입니다 👆";
+    alertName.style.fontFamily = 'Nanum Gothic', sans - serif;
   } else {
     localStorage.setItem("userName", userName);
     location.href = `survey/survey.html`;

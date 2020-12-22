@@ -54,7 +54,6 @@ function endQna() {
   localStorage.setItem("valList", JSON.stringify(userVal));
   localStorage.setItem("valNum", resultVal);
   localStorage.setItem("valAcc", valAcc);
-
   location.href = `../result/result.html`;
 }
 
@@ -79,6 +78,9 @@ function handleNext(event) {
       }
       break;
     }
+  }
+  if (idx == (lstLen - 1)) {
+    nextBtn.innerText = "제출하기";
   }
   nextBtn.disabled = true;
   handleQna(qArr, aArr);
