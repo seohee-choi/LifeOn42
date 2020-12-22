@@ -12,7 +12,7 @@ canvas.height = 500;
 
 function share(url) {
 	if (navigator.share) {
-		navigator.share({ title: "LifeOn42", text: "42서울 속 당신의 모습을 지금 알아보세요🎈" });
+		navigator.share({ title: "LifeOn42", text: "42서울 속 당신의 모습을 지금 알아보세요🎈", url: `${url}` });
 	} else {
 		alert('지원하지 않는 브라우저입니다');
 	}
