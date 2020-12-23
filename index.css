@@ -54,12 +54,12 @@ body {
   /*margin-bottom: 10px;*/
   background-color: transparent;
   border: 1px solid rgb(211, 211, 211);
-  color: rgb(73, 73, 73);
+  /* color: rgb(73, 73, 73); */
   min-width: 100px;
   height: 30px;
-  background-color: rgb(219, 219, 219);
+  /* background-color: #dbdbdb; */
   text-align: center;
-  font-size: 3vmin;
+  font-size: 18px;
   /*padding-bottom: 5px;*/
   padding:4px 7px;
   border-radius: 8px;
@@ -101,10 +101,10 @@ button {
 @media (max-width: 450px)
 {
   .subtitle {
-    font-size: 6vmin; 
+    font-size: 18px; 
   }
   .user {
-    font-size: 5.0vmin;
+    font-size: 18px;
   }
 }
 
