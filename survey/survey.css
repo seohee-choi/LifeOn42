@@ -153,6 +153,20 @@ header {
   cursor: pointer;
 }
 
+@media (max-height: 600px)
+{
+  html,body {
+    justify-content:flex-start;
+  }
+  .responses{
+    min-height: 100px;
+  }
+  .choose {
+    font-size: 13px;
+    min-height: 30px;
+  }
+}
+
 .nextBtn:active {
   background-color: #164eb5;
 }

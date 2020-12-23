@@ -97,7 +97,7 @@ button {
 
   /*margin-top: 32px;*/
 }
-/* 
+
 @media (max-width: 450px)
 {
   .subtitle {
@@ -106,7 +106,7 @@ button {
   .user {
     font-size: 18px;
   }
-} */
+}
 
 button:active{
   background-color: #164eb5;
