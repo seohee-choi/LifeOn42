@@ -86,7 +86,7 @@ button {
   font-family:'Nanum Gothic', sans-serif;
   color: #fff;
   display: inline-block;
-  min-width: 28px;
+  min-width: 100px;
   /*height:30px;*/
   padding: 13px 23px;
   /*padding: 18px 23px;*/
@@ -100,9 +100,6 @@ button {
 
 @media (max-width: 450px)
 {
-  .title{
-    /*text-shadow: 3px 3px 3px rgb(207, 207, 207);*/
-  }
   .subtitle {
     font-size: 6vmin; 
   }
