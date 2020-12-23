@@ -55,7 +55,7 @@ body {
   background-color: transparent;
   border: 1px solid rgb(211, 211, 211);
   color: rgb(73, 73, 73);
-  width: 300px;
+  min-width: 28px;
   height: 30px;
   /*background-color: rgb(219, 219, 219);*/
   text-align: center;
@@ -107,11 +107,7 @@ button {
     font-size: 6vmin; 
   }
   .user {
-  width: 200px;
     font-size: 5.0vmin;
-  }
-  button {
-    font-size : 15px;
   }
 }
 
