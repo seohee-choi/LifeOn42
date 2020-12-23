@@ -39,7 +39,7 @@ canvas {
 
 .title {
   margin: 50px;
-  font-size: 30pt;
+  font-size: 27pt;
   font-family: "Russo One", 'Nanum Gothic';
   line-height: 47px;
 }
@@ -77,17 +77,17 @@ canvas {
   justify-content: center;
 }
 
-.submain {
+.submain {  
   display: flex;
   justify-content: center;
   font-weight: bold;
   color: black;
-  background-color: #00afb1;
+  background-color: #1B65F1;
   font-size: 30px;
   line-height: 70px;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35);
+  /* box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), inset 0 -2px 6px 0 rgba(10,37,64,.35); */
 }
 
 .subsub {
@@ -181,7 +181,7 @@ button {
   width: 40vw;
   max-width: 150px;
   height: 70px;
-  background-color: #00afb1;
+  background-color:#1B65F1;
   border: 0;
   outline: 0;
   border-radius: 8px;
