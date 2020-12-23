@@ -12,11 +12,11 @@ body {
 }
 
 .midBox {
-  width: 40%;
+  width: 70%;
   height: 50%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -26,37 +26,51 @@ body {
   align-items: center;
   width: 80%;
   font-weight: 600;
-  font-size: 18vmin;
+  font-size: 19vmin;
   color: black;
   font-family: "Russo One", sans-serif;
-  text-shadow: 5px 5px 5px darkgrey;
+  /*text-shadow: 3px 3px 3px darkgrey;*/
 }
 
 .subtitle {
   display: flex;
+  width:100%;
   justify-content: center;
   align-items: center;
   font-family: 'Nanum Gothic', "Russo One";
   font-weight: 800;
   margin-top: 1%;
   margin-bottom: 15px;
-  font-size: 3.5vmin;
-  text-shadow: 3px 3px 3px darkgrey;
+  font-size: 4vmin;
+  /*text-shadow: 3px 3px 3px rgb(207, 207, 207);*/
 }
 
 .user {
   font-family: "Russo One", 'Nanum Gothic';
   margin-top: 40px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   background-color: transparent;
+  border: 2px solid rgb(211, 211, 211);
+  color: rgb(73, 73, 73);
+  width: 300px;
+  height: 30px;
+  /*background-color: rgb(219, 219, 219);*/
   text-align: center;
-  font-size: 4vmin;
-  padding-bottom: 5px;
-  border: 0;
+  font-size: 3vmin;
+  /*padding-bottom: 5px;*/
+  padding:4px 7px;
+
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   outline: 0;
 }
 
+
+
 input::placeholder {
+  color: rgb(177, 177, 177);
+
   font-family:'Nanum Gothic', sans-serif;
 }
 
@@ -69,9 +83,31 @@ button {
   color: #fff;
   display: inline-block;
   min-width: 28px;
-  padding: 18px 23px;
+  /*height:30px;*/
+  padding: 13px 23px;
+  /*padding: 18px 23px;*/
   border-radius: 28px;
-  margin-top: 32px;
+  margin-top: 20px;
+  font-size : 18px;
+
+  /*margin-top: 32px;*/
+}
+
+@media (max-width: 450px)
+{
+  .title{
+    /*text-shadow: 3px 3px 3px rgb(207, 207, 207);*/
+  }
+  .subtitle {
+    font-size: 6vmin; 
+  }
+  .user {
+  width: 200px;
+    font-size: 5.0vmin;
+  }
+  button {
+    font-size : 15px;
+  }
 }
 
 button:active{
