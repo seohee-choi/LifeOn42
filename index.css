@@ -44,13 +44,16 @@ body {
   font-size: 4vmin;
   /*text-shadow: 3px 3px 3px rgb(207, 207, 207);*/
 }
+.alertName{
+  margin-top: 10px;
+}
 
 .user {
   font-family: "Russo One", 'Nanum Gothic';
   margin-top: 40px;
   /*margin-bottom: 10px;*/
   background-color: transparent;
-  border: 2px solid rgb(211, 211, 211);
+  border: 1px solid rgb(211, 211, 211);
   color: rgb(73, 73, 73);
   width: 300px;
   height: 30px;
@@ -59,8 +62,9 @@ body {
   font-size: 3vmin;
   /*padding-bottom: 5px;*/
   padding:4px 7px;
+  border-radius: 8px;
 
-  border-top: 0;
+  /* border-top: 0; */
   border-left: 0;
   border-right: 0;
   outline: 0;
