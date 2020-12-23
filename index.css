@@ -57,9 +57,9 @@ body {
   /* color: rgb(73, 73, 73); */
   min-width: 100px;
   height: 30px;
-  /* background-color: #dbdbdb; */
+  background-color: #dbdbdb;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   /*padding-bottom: 5px;*/
   padding:4px 7px;
   border-radius: 8px;
@@ -93,11 +93,11 @@ button {
   border-radius: 28px;
   border-radius: 8px;
   margin-top: 20px;
-  font-size : 18px;
+  font-size : 20px;
 
   /*margin-top: 32px;*/
 }
-
+/* 
 @media (max-width: 450px)
 {
   .subtitle {
@@ -106,7 +106,7 @@ button {
   .user {
     font-size: 18px;
   }
-}
+} */
 
 button:active{
   background-color: #164eb5;
