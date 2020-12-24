@@ -54,12 +54,12 @@ body {
   /*margin-bottom: 10px;*/
   background-color: transparent;
   border: 1px solid rgb(211, 211, 211);
-  color: rgb(73, 73, 73);
-  width: 300px;
+  /* color: rgb(73, 73, 73); */
+  min-width: 100px;
   height: 30px;
-  /*background-color: rgb(219, 219, 219);*/
+  background-color: #dbdbdb;
   text-align: center;
-  font-size: 3vmin;
+  font-size: 20px;
   /*padding-bottom: 5px;*/
   padding:4px 7px;
   border-radius: 8px;
@@ -86,32 +86,25 @@ button {
   font-family:'Nanum Gothic', sans-serif;
   color: #fff;
   display: inline-block;
-  min-width: 28px;
+  min-width: 100px;
   /*height:30px;*/
   padding: 13px 23px;
   /*padding: 18px 23px;*/
   border-radius: 28px;
   border-radius: 8px;
   margin-top: 20px;
-  font-size : 18px;
+  font-size : 20px;
 
   /*margin-top: 32px;*/
 }
 
 @media (max-width: 450px)
 {
-  .title{
-    /*text-shadow: 3px 3px 3px rgb(207, 207, 207);*/
-  }
   .subtitle {
-    font-size: 6vmin; 
+    font-size: 18px; 
   }
   .user {
-  width: 200px;
-    font-size: 5.0vmin;
-  }
-  button {
-    font-size : 15px;
+    font-size: 18px;
   }
 }
 
