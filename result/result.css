@@ -7,17 +7,6 @@ body {
   background: #F5F5F7;
 }
 
-.loadingPage {
-  width: 100%;
-  /* height: ; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* text-align: center; */
-  background: chartreuse;
-  /* font-size: large; */
-}
-
 section:nth-child(2) {
   display: flex;
   justify-content: center;
