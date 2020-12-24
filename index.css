@@ -57,7 +57,7 @@ body {
   /* color: rgb(73, 73, 73); */
   min-width: 100px;
   height: 30px;
-  background-color: #dbdbdb;
+  /* background-color: #dbdbdb; */
   text-align: center;
   font-size: 20px;
   /*padding-bottom: 5px;*/
@@ -86,11 +86,16 @@ button {
   font-family:'Nanum Gothic', sans-serif;
   color: #fff;
   display: inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-width: 100px;
   /*height:30px;*/
   padding: 13px 23px;
   /*padding: 18px 23px;*/
-  border-radius: 28px;
+  /* border-radius: 28px; */
   border-radius: 8px;
   margin-top: 20px;
   font-size : 20px;

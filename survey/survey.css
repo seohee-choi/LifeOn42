@@ -94,7 +94,7 @@ header {
 
 .choose {
   -webkit-tap-highlight-color: transparent; 
-  background: #d6e2f7;
+  background: #dfe5f0;
   /* border:3px solid #769be6; */
   display: flex;
   justify-content: center;
@@ -123,7 +123,7 @@ header {
 }
 
 .clicked {
-  background-color: #89b5f0;
+  background-color: #a1b5d0;
 }
 
 .nav {
@@ -135,14 +135,17 @@ header {
 }
 
 .nextBtn {
-  width: 30vh;
   display: inline-block;
+  width:3vw;
   color: #fff;
   background:#1B65F1;
 
   border: 0;
   outline: 0;
-  min-width: 28px;
+
+  min-width: 130px;
+  max-width: 400px;
+
   padding: 18px 23px;
   border-radius: 28px;
   border-radius: 8px;
@@ -158,8 +161,8 @@ header {
   html,body {
     justify-content:flex-start;
   }
-  .responses{
-    min-height: 100px;
+  .result{
+    height: auto;
   }
   .choose {
     font-size: 13px;
@@ -167,6 +170,22 @@ header {
   }
 }
 
+@media (max-width: 400px)
+{
+  html,body {
+    justify-content:flex-start;
+  }
+  .result{
+    height: auto;
+  }
+  .responses{
+    min-height: 100px;
+  }
+  .choose {
+    font-size: 13px;
+    min-height: 50px;
+  }
+}
 .nextBtn:active {
   background-color: #164eb5;
 }
