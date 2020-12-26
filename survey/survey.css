@@ -161,22 +161,6 @@ header {
   }
 }
 
-@media (max-width: 400px)
-{
-  html,body {
-    justify-content:flex-start;
-  }
-  .result{
-    height: auto;
-  }
-  .responses{
-    min-height: 100px;
-  }
-  .choose {
-    font-size: 13px;
-    min-height: 50px;
-  }
-}
 .nextBtn:active {
   background-color: #164eb5;
 }
