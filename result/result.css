@@ -271,7 +271,6 @@ img {
 
 .name {
   position: absolute;
-  border: 1px solid rgb(150, 142, 156);
   padding: 5px 1.7vw;
   font-family: "Russo One", sans-serif;
   text-align: center;
