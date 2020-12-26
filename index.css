@@ -52,8 +52,6 @@ body {
   outline: 0;
 }
 
-
-
 input::placeholder {
   color: rgb(177, 177, 177);
   font-family:'Nanum Gothic', sans-serif;
