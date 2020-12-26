@@ -4,7 +4,8 @@ html,
 body {
   width: auto;
   min-width: 320px;
-  background: #F5F5F7;
+  /* background: #F5F5F7; */
+  background-color: #81ead6;
 }
 
 section:nth-child(2) {
@@ -67,6 +68,7 @@ canvas {
   border: 4px solid rgb(0, 5, 26);
   padding: 30px;
   word-wrap: break-word;
+  background-color: white;
 }
 
 .submain, .subsub {
@@ -75,6 +77,7 @@ canvas {
   overflow: auto;
   display: flex;
   justify-content: center;
+
 }
 
 .submain {  
@@ -82,7 +85,8 @@ canvas {
   justify-content: center;
   font-weight: bold;
   color: black;
-  background-color: #1B65F1;
+  /* background-color: rgb(129, 234, 214); */
+  background:  rgb(255, 219, 118);
   font-size: 30px;
   line-height: 70px;
   margin-bottom: 20px;
@@ -92,6 +96,7 @@ canvas {
 
 .subsub {
   line-height: 30px;
+
 }
 
 @media (max-width: 1050px)
@@ -241,6 +246,7 @@ i {
   margin: 20px 0px;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 20px;
+  background-color: rgb(198, 198, 198);
 }
 
 .creater {
@@ -271,7 +277,6 @@ img {
 
 .name {
   position: absolute;
-  border: 1px solid rgb(150, 142, 156);
   padding: 5px 1.7vw;
   font-family: "Russo One", sans-serif;
   text-align: center;
@@ -292,6 +297,7 @@ h2 {
   margin: 30px 50px;
   line-height: 25px;
   font-family: 'Nanum Gothic', sans-serif;
+  text-align: center;
 }
 
 .Return {
@@ -299,4 +305,9 @@ h2 {
   margin-bottom: 35px;
   height: 45px;
   font-family: 'Nanum Gothic', sans-serif;
+}
+
+img:last-child {
+  /* border: 2px solid red; */
+  margin-bottom: 30px;
 }
