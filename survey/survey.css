@@ -67,7 +67,7 @@ header {
 
   /*background-color: brown;*/
   font-size: 30px ;
-  word-break:keep-all;
+  /*word-break:keep-all;*/
   font-family: 'Black Han Sans', sans-serif;
   line-height: 33px;
   text-align: center;
@@ -86,7 +86,7 @@ header {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  word-break: keep-all;
+  /*word-break: keep-all;*/
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   font-family: 'Nanum Gothic', sans-serif;
@@ -124,7 +124,7 @@ header {
 }
 
 .clicked {
-  background:#1B65F1;
+  background:rgb(235, 187, 58);;
 }
 
 .nav {
