@@ -20,18 +20,6 @@ body {
   align-items: center;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  font-weight: 600;
-  font-size: 19vmin;
-  color: black;
-  font-family: "Russo One", sans-serif;
-  /*text-shadow: 3px 3px 3px darkgrey;*/
-}
-
 .subtitle {
   display: flex;
   width:100%;
@@ -42,8 +30,8 @@ body {
   margin-top: 1%;
   margin-bottom: 15px;
   font-size: 4vmin;
-  /*text-shadow: 3px 3px 3px rgb(207, 207, 207);*/
 }
+
 .alertName{
   margin-top: 10px;
 }
@@ -51,30 +39,21 @@ body {
 .user {
   font-family: "Russo One", 'Nanum Gothic';
   margin-top: 40px;
-  /*margin-bottom: 10px;*/
   background-color: transparent;
   border: 1px solid rgb(211, 211, 211);
-  /* color: rgb(73, 73, 73); */
   min-width: 100px;
   height: 30px;
-  /* background-color: #dbdbdb; */
   text-align: center;
   font-size: 20px;
-  /*padding-bottom: 5px;*/
   padding:4px 7px;
   border-radius: 8px;
-
-  /* border-top: 0; */
   border-left: 0;
   border-right: 0;
   outline: 0;
 }
 
-
-
 input::placeholder {
   color: rgb(177, 177, 177);
-
   font-family:'Nanum Gothic', sans-serif;
 }
 
@@ -86,23 +65,23 @@ button {
   font-family:'Nanum Gothic', sans-serif;
   color: #fff;
   display: inline-block;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-width: 100px;
-  /*height:30px;*/
   padding: 13px 23px;
-  /*padding: 18px 23px;*/
-  /* border-radius: 28px; */
   border-radius: 8px;
   margin-top: 20px;
   font-size : 20px;
-
-  /*margin-top: 32px;*/
 }
+@media (max-width: 800px)
+{
+  img {
+    width: 95%;
+  }
 
+}
 @media (max-width: 450px)
 {
   .subtitle {

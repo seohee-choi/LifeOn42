@@ -10,9 +10,13 @@ const url = "http://seohee-choi.github.io/LifeOn42";
 canvas.width = 500;
 canvas.height = 500;
 
-function share(url) {
+function share() {
 	if (navigator.share) {
-		navigator.share({ title: "LifeOn42", text: "42서울 속 당신의 모습을 지금 알아보세요🎈", url: `${url}` });
+		navigator.share({
+			title: "LifeOn42",
+			text: "42서울 속 당신의 모습을 지금 알아보세요🎈",
+			url: url,
+		});
 	} else {
 		alert('지원하지 않는 브라우저입니다');
 	}
@@ -144,12 +148,12 @@ function handleResult() {
 	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
-	subMain.innerText = `Lv.${resultIdx} ${exList[resultIdx].t}`;
+	subMain.innerText = `Lv.${resultVal % 7 + 1} ${exList[resultIdx].t}`;
 	subsub.innerText = `${exList[resultIdx].s}`;
 }
 
 function againTest() {
-	location.href = "https://seohee-choi.github.io/LifeOn42/";
+	location.href = url;
 }
 
 function init() {
