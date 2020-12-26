@@ -148,7 +148,7 @@ function handleResult() {
 	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
-	subMain.innerText = `Lv.${resultVal % 7} ${exList[resultIdx].t}`;
+	subMain.innerText = `Lv.${resultVal % 7 + 1} ${exList[resultIdx].t}`;
 	subsub.innerText = `${exList[resultIdx].s}`;
 }
 
