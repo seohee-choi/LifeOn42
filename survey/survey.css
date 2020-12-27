@@ -8,10 +8,7 @@ html,body {
   width: auto;
   min-width: 320px;
   font-size: 62.5%;
-  /* background-color: #81ead6; */
   background: #F5F5F7;
-
-
 }
 
 header {
@@ -32,7 +29,6 @@ header {
 }
 
 .status-bar[value]::-webkit-progress-bar {
-  /* background-color: rgb(198, 198, 198); */
   background-color:#F5F5F7;
 }
 
@@ -41,15 +37,12 @@ header {
 }
 
 .result {
-	/* background-color: #fff; */
-  
-  -webkit-tap-highlight-color: transparent; 
+	-webkit-tap-highlight-color: transparent; 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   margin-top: 5%;
-
   width: 90vmin;
   min-height: 500px;
   color:rgb(32, 32, 32);
@@ -80,18 +73,13 @@ header {
   flex-direction: column;
   cursor: pointer;
   word-break: keep-all;
-
   -webkit-tap-highlight-color: transparent;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
 .choose {
   -webkit-tap-highlight-color: transparent; 
-  /* background-color: rgb(181, 181, 181); */
   background-color: rgb(198, 198, 198);
-
-  /* background:  #ffe876; */
-  /* border:3rg#ffe876239, 116)d #769be6; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,9 +99,6 @@ header {
 
 .clicked {
   background:  #ffe876;
-  /* background:#e7cb3e; */
-  /* background:#ffda76 */
-  /* background:rgb(235, 187, 58); */
 }
 
 .nav {
@@ -125,7 +110,7 @@ header {
 }
 
 .nextBtn {
-  background-color:#1B65F1;
+  background-color:#4B7DF6;
 
   display: inline-block;
   color: #fff;
@@ -144,6 +129,5 @@ header {
 }
 
 .nextBtn:active {
-  background: #0164C3
-  /* background-color: #8e8f94; */
+  background: #0164C3;
 }

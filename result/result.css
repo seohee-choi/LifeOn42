@@ -5,16 +5,15 @@ body {
   width: auto;
   min-width: 320px;
   background: #F5F5F7;
-
-  /* background-color: #81ead6; */
 }
 
 section:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #212131;
+	background-color: #81ead6;
   color: aliceblue;
+  color: black;
   font-size: 30px;
 }
 
@@ -86,7 +85,6 @@ canvas {
   font-weight: bold;
   color: black;
   background: #ffe876;
-  /* background:  rgb(255, 219, 118); */
   font-size: 30px;
   line-height: 70px;
   margin-bottom: 20px;
@@ -184,7 +182,7 @@ button {
   width: 40vw;
   max-width: 150px;
   height: 70px;
-  background-color:#1B65F1;
+  background-color:#4B7DF6;
   border: 0;
   outline: 0;
   border-radius: 8px;
@@ -244,7 +242,6 @@ i {
   margin: 20px 0px;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 20px;
-  /* background-color: rgb(198, 198, 198); */
 }
 
 .creater {
@@ -284,9 +281,8 @@ img {
 }
 
 #ifkakao {
-  background:#333333;
+  background-color: rgb(72, 72, 72);
   color: aliceblue;
-
 }
 
 h2 {
@@ -295,7 +291,6 @@ h2 {
   align-items: center;
   margin: 30px;
   line-height: 25px;
-
   font-family: 'Nanum Gothic', sans-serif;
   text-align: center;
 }
