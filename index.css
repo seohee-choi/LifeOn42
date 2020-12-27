@@ -25,7 +25,7 @@ body {
   width:100%;
   justify-content: center;
   align-items: center;
-  font-family: 'Nanum Gothic', "Russo One";
+  font-family: 'Nanum Gothic', "sans serif";
   font-weight: 600;
   margin-top: 13px;
   margin-bottom: 15px;
@@ -37,7 +37,7 @@ body {
 }
 
 .user {
-  font-family: "Russo One", 'Nanum Gothic';
+  font-family: 'Nanum Gothic', sans-serif;
   margin-top: 40px;
   background-color: transparent;
   border: 1px solid rgb(211, 211, 211);
@@ -58,7 +58,7 @@ input::placeholder {
 }
 
 button {
-  background:#1B65F1;
+  background-color:#4B7DF6;
   border: 0;
   outline: 0;
   cursor: pointer;
@@ -75,6 +75,7 @@ button {
   margin-top: 20px;
   font-size : 20px;
 }
+
 @media (max-width: 800px)
 {
   img {
