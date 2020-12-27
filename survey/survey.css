@@ -18,7 +18,6 @@ header {
   width: 100%;
   height: 20px;
   margin-top:10%; 
-  background-color:#1B65F1;
   flex-shrink: 0;
 }
 
@@ -49,9 +48,10 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  /* margin-top: 3%; */
-  width: 50vh;
-  height: 500px;
+  margin-top: 5%;
+
+  width: 90vmin;
+  min-height: 500px;
   color:rgb(32, 32, 32);
 }
 
@@ -87,7 +87,10 @@ header {
 
 .choose {
   -webkit-tap-highlight-color: transparent; 
-  background:  #ffe876;
+  /* background-color: rgb(181, 181, 181); */
+  background-color: rgb(198, 198, 198);
+
+  /* background:  #ffe876; */
   /* border:3rg#ffe876239, 116)d #769be6; */
   display: flex;
   justify-content: center;
@@ -107,8 +110,10 @@ header {
 }
 
 .clicked {
-  background:#e7cb3e;
-  /* background:rgb(235, 187, 58);; */
+  background:  #ffe876;
+  /* background:#e7cb3e; */
+  /* background:#ffda76 */
+  /* background:rgb(235, 187, 58); */
 }
 
 .nav {
@@ -120,11 +125,13 @@ header {
 }
 
 .nextBtn {
+  background-color:#1B65F1;
+
   display: inline-block;
   color: #fff;
-  background-color: rgb(181, 181, 181);
   border: 0;
   outline: 0;
+
   min-width: 150px;
   padding: 18px 23px;
   border-radius: 28px;
@@ -137,5 +144,6 @@ header {
 }
 
 .nextBtn:active {
-  background-color: #8e8f94;
+  background: #0164C3
+  /* background-color: #8e8f94; */
 }
