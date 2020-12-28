@@ -18,21 +18,21 @@ header {
   flex-shrink: 0;
 }
 
-.status-bar {
+#status-bar {
   width: 100%;
   height: 100%;
 }
 
-.status-bar[value] {
+#status-bar[value] {
 	-webkit-appearance: none;
 	appearance: none;
 }
 
-.status-bar[value]::-webkit-progress-bar {
+#status-bar[value]::-webkit-progress-bar {
   background-color:#F5F5F7;
 }
 
-.status-bar[value]::-webkit-progress-value {
+#status-bar[value]::-webkit-progress-value {
 	background-color: #81ead6;
 }
 
