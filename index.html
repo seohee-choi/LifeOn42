@@ -8,20 +8,18 @@
   <link rel="stylesheet" href="index.css" />
   <title>LifeOn42</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 
 <body>
-  <div class="midBox">
+  <div id="midBox">
     <img src="pic/logo.png" alt="LifeOn42" width="85%">
-    <div class="subtitle">42서울 속 당신의 모습은?</div>
+    <span>42서울 속 당신의 모습은?</span>
     <form class="js-user">
-      <input type="text" class="js-id user" placeholder="이름을 입력하세요"></input>
+      <input type="text" class="js-id user" placeholder="이름을 입력하세요" required></input>
+      <button class="js-button" onclick="checkName(event)">시작하기</button>
     </form>
-    <h3 class="alertName"></h3>
-    <button class="js-button">시작하기</button>
+    <script src="index.js"></script>
   </div>
-  <script src="index.js"></script>
 </body>
 
 </html>
