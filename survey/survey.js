@@ -12,22 +12,20 @@ const ACCNUM = 13;
 
 var i = 0;
 function move(idx) {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("status-bar");
-    var width = elem.style.width;
-    var id = setInterval(frame, 10);
-
+    let elem = document.getElementById("status-bar");    
+    let width = Math.floor((100 / lstLen) * (idx));
+    let maxWidth = Math.floor((100 / lstLen) * (idx + 1));
+    
+    let id = setInterval(frame, 20);
     function frame() {
-      if (width >= idx) {
+      if (width >= maxWidth) {
         clearInterval(id);
-        i = 0;
       } else {
         width++;
         elem.style.width = width + "%";
+        console.log(maxWidth, width);
       }
     }
-  }
 }
 
 const qArr = qnaList.map((node) => {
