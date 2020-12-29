@@ -13,7 +13,7 @@ body {
 
 #midBox {
   width: 70%;
-  height: 50%;
+  /* height: 50%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,8 +77,11 @@ button {
 
 @media (max-width: 800px)
 {
+  #midBox {
+    width: 80%;
+  }
   img {
-    width: 95%;
+    width: 100%;
   }
 
 }
