@@ -1,5 +1,4 @@
 const bodyDiv = document.querySelector(".bodyDiv");
-const loadingBox = document.querySelector(".loadingPage");
 const canvas = document.getElementById("jsCanvas");
 const userImg = document.querySelector(".character");
 const save = document.querySelector(".jsSave");
@@ -167,11 +166,26 @@ function init() {
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (location.href.indexOf('#') == -1) {
+		const loadingBox = document.querySelector(".loadingBox");
+		const wave = document.querySelector(".wave");
+		let height = -100;
+
 		loadingBox.style.display = "";
+		let id = setInterval(frame, 30);
+		function frame() {
+			if (height >= 0) {
+				clearInterval(id);
+			} else {
+				height++;
+				// wave.style.bottom = height + "%";
+				// loadingBox.innerText = height + 100 + "%";
+				// console.log(loadingBox);
+		  }
+		}
 		bodyDiv.style.display = "none";
 	}
 	window.onload = () => {
-		init();
+		// init();
 	};
 }
 );
