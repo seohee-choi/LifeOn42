@@ -11,7 +11,7 @@ section:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
-	background-color: #81ead6;
+	background-color: #8fdfd0;
   color: aliceblue;
   color: black;
   font-size: 30px;
@@ -101,11 +101,9 @@ canvas {
     flex-direction: column;
     height: 850px;
   }
-
   canvas{
   box-shadow: none;
   }
-
   .character:last-child{
     margin-top:30px;
     margin-bottom:30px;
@@ -118,15 +116,12 @@ canvas {
   .resultPic{
     height: 800px;
   }
-
   canvas{    
     width: 400px;
   }
-
   .character:last-child{
     width: 332px;
   }
-
   .creater {
     width: 170px;
     height: 200px;
@@ -138,7 +133,6 @@ canvas {
   canvas{    
     width: 350px;
   }
-
   .character:last-child{
     width: 282px;
   }
@@ -152,11 +146,9 @@ canvas {
   canvas{    
     width: 300px;
   }
-
   .character:last-child{
     width: 232px;
   }
-
   .submain {
     font-size: 20px;
   }

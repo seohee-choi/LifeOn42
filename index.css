@@ -11,29 +11,32 @@ body {
   background: #F5F5F7;
 }
 
-.midBox {
+#midBox {
   width: 70%;
-  height: 50%;
+  /* height: 50%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.subtitle {
+span {
   display: flex;
   width:100%;
   justify-content: center;
   align-items: center;
-  font-family: 'Nanum Gothic', "sans serif";
+  font-family: 'Nanum Gothic', sans-serif;
   font-weight: 600;
   margin-top: 13px;
   margin-bottom: 15px;
   font-size: 4vmin;
 }
 
-.alertName{
-  margin-top: 10px;
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .user {
@@ -65,10 +68,6 @@ button {
   font-family:'Nanum Gothic', sans-serif;
   color: #fff;
   display: inline-block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   min-width: 100px;
   padding: 13px 23px;
   border-radius: 8px;
@@ -78,8 +77,11 @@ button {
 
 @media (max-width: 800px)
 {
+  #midBox {
+    width: 80%;
+  }
   img {
-    width: 95%;
+    width: 100%;
   }
 
 }

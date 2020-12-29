@@ -1,7 +1,7 @@
 const questionBox = document.querySelector(".question");
 const chooseBox = document.querySelectorAll(".choose");
 const nextBtn = document.querySelector(".jsNext");
-const statusBar = document.querySelector(".status-bar");
+//const statusBar = document.querySelector("#status-bar");
 const lstLen = qnaList.length;
 
 let userVal = [];
@@ -9,6 +9,24 @@ let resultVal = 0;
 let idx = 0;
 let valAcc = 0;
 const ACCNUM = 13;
+
+var i = 0;
+function move(idx) {
+    let elem = document.getElementById("status-bar");    
+    let width = Math.floor((100 / lstLen) * (idx));
+    let maxWidth = Math.floor((100 / lstLen) * (idx + 1));
+    
+    let id = setInterval(frame, 20);
+    function frame() {
+      if (width >= maxWidth) {
+        clearInterval(id);
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        console.log(maxWidth, width);
+      }
+    }
+}
 
 const qArr = qnaList.map((node) => {
   return {
@@ -26,7 +44,7 @@ const scoreArr = qnaList.map((node) => {
   };
 });
 
-statusBar.max = JSON.stringify(lstLen);
+//statusBar.max = JSON.stringify(lstLen);
 
 function paintQuestion(question) {
   const currQ = question.question;
@@ -62,7 +80,8 @@ function handleQna(qArr, aArr) {
   else {
     paintQuestion(qArr[idx]);
     paintAnswer(aArr[idx]);
-    statusBar.value = JSON.stringify(idx + 1);
+    move(idx);
+    //statusBar.value = JSON.stringify(idx + 1);
     idx++;
   }
 }

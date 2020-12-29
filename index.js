@@ -1,24 +1,12 @@
-const userForm = document.querySelector(".js-user");
-const userInput = document.querySelector(".js-id");
-const startBtn = document.querySelector(".js-button");
+function qnaStart(userName) {
+  localStorage.setItem("userName", userName);
+  location.href = `survey/survey.html`;
+}
 
-function qnaStart() {
-  const userName = userInput.value;
-  const alertName = document.querySelector(".alertName");
-  if (userName < 1) {
-    alertName.innerText = "필수 입력입니다 👆";
-    alertName.style.fontFamily = 'Nanum Gothic', sans - serif;
-  } else {
-    localStorage.setItem("userName", userName);
-    location.href = `survey/survey.html`;
+function checkName(e) {
+  const userInput = document.querySelector(".js-id");
+  if (userInput.value) {
+    e.preventDefault();
+    qnaStart(userInput.value);
   }
 }
-
-function init() {
-  startBtn.onclick = qnaStart;
-  userForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-}
-
-init();
