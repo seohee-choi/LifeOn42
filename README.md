@@ -5,6 +5,7 @@
 - 42 과정에서 시작해 인생의 목표를 위해 헤엄쳐나가는 우리 자신의 모습을 그려보아요
 
 # 시연영상💻
+<a href="https://seohee-choi.github.io/LifeOn42/">지금 바로 LifeOn42</a>
 
 # 팀원👩‍💻
 - <a href="https://github.com/seohee-choi">seohchoi</a>
@@ -19,3 +20,4 @@
 <a href="https://github.com/seohee-choi/LifeOn42/wiki">위키 페이지</a>
 
 # 업데이트🎯
+- 코드 리팩토링 진행중(12/28 ~)
