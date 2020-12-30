@@ -82,13 +82,14 @@ canvas {
 .submain {  
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  font-weight: lighter;
   color: black;
   background: #ffe876;
   font-size: 30px;
   line-height: 70px;
   margin-bottom: 20px;
   border-radius: 10px;
+  font-family: 'Black Han Sans', sans-serif;
 }
 
 .subsub {
@@ -296,4 +297,53 @@ h2 {
 
 img:last-child {
   margin-bottom: 30px;
+}
+
+.loadingBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50vh;
+  top:50%;
+  left: 50%;
+  z-index: 100;
+  overflow: hidden;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 3vw;
+  color: #F5F5F7;
+}
+
+.wave {
+  z-index: -100;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  background: #81ead6;
+  width: 50vw;
+  height: 50vw;
+  margin-left: -25vw;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  transition-duration: 0.75s;
+  transition-timing-function: ease;
+  animation: rotate 2000ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    top: 100%;
+    transform: rotate(0deg);
+  }
+  60% {
+    top: 40%;
+  }
+  100% {
+    top: 0%;
+    transform: rotate(360deg);
+  }
 }

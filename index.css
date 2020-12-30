@@ -13,7 +13,6 @@ body {
 
 #midBox {
   width: 70%;
-  /* height: 50%; */
   display: flex;
   flex-direction: column;
   justify-content: center;

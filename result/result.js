@@ -1,5 +1,4 @@
 const bodyDiv = document.querySelector(".bodyDiv");
-const loadingBox = document.querySelector(".loadingPage");
 const canvas = document.getElementById("jsCanvas");
 const userImg = document.querySelector(".character");
 const save = document.querySelector(".jsSave");
@@ -114,11 +113,15 @@ function handleImage(callback) {
 	}
 }
 
+function replaceFn() {
+	location.replace(location.href + '?#');
+}
+
 function drawCanvas(workCanvas) {
 	const context = canvas.getContext('2d');
 	context.drawImage(workCanvas, 0, 0);
 	if (location.href.indexOf('#') == -1)
-		location.replace(location.href + '?#');
+		setTimeout(replaceFn, 2500);
 }
 
 function calcResult(resultVal) {
@@ -167,6 +170,7 @@ function init() {
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (location.href.indexOf('#') == -1) {
+		const loadingBox = document.querySelector(".loadingBox");
 		loadingBox.style.display = "";
 		bodyDiv.style.display = "none";
 	}
