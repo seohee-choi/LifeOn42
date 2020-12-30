@@ -1,18 +1,19 @@
 ![logo](https://user-images.githubusercontent.com/60740882/103281899-7bffd880-4a17-11eb-9183-6746d6a02422.png)
 
-# 소개
+# 소개🎉
 - 42서울 속 당신의 모습은?
-- 42 과정에서 시작해 인생의 목표를 위해 헤엄쳐나가는 우리 자신의 모습을 그려보아요
+- 42 과정에서 시작해 인생의 목표를 위해 헤엄쳐나가는 우리 자신의 모습을 그려보아요😀
 
 # 시연영상💻
-<a href="https://seohee-choi.github.io/LifeOn42/">지금 바로 LifeOn42</a>
+<a href="https://seohee-choi.github.io/LifeOn42/">지금 바로 해보세요!</a>
+
 
 # 팀원👩‍💻
-- <a href="https://github.com/seohee-choi">seohchoi</a>
 - <a href="https://github.com/yeslee-v">yeslee</a>
+- <a href="https://github.com/seohee-choi">seohchoi</a>
 
 # 개발 환경🔨
-- 사용 언어: HTML5, CSS3, Javascript
+- 사용 언어: HTML, CSS, Javascript
 - 협업 도구: Notion, Slack
 - 개발 방식: Peer Programminig
 
