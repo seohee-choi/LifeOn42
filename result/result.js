@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		bodyDiv.style.display = "none";
 	}
 	window.onload = () => {
-		init();
+		// init();
 	};
 }
 );
