@@ -5,7 +5,6 @@ html,body {
   flex-direction: column;
   align-items: center;
   justify-content:center;
-  /* width: auto; */
   width: 100%;
   min-width: 320px;
   font-size: 62.5%;
@@ -25,19 +24,6 @@ header {
   height: 100%;
   background-color: #81ead6;
 }
-/* 
-#status-bar[value] {
-	-webkit-appearance: none;
-	appearance: none;
-}
-
-#status-bar[value]::-webkit-progress-bar {
-  background-color:#F5F5F7;
-}
-
-#status-bar[value]::-webkit-progress-value {
-	background-color: #81ead6;
-} */
 
 .result {
 	-webkit-tap-highlight-color: transparent; 
@@ -45,7 +31,6 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  /* margin-top: 5%; */
   width: 90vmin;
   min-height: 500px;
   color:rgb(32, 32, 32);
