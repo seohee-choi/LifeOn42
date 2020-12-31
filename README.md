@@ -5,6 +5,7 @@
 - 42 과정에서 시작해 인생의 목표를 위해 헤엄쳐나가는 우리 자신의 모습을 그려보아요😀
 
 # 시연영상💻
+![ezgif-5-aa045a96f705](https://user-images.githubusercontent.com/60740882/103344749-d742d100-4ad2-11eb-883a-29b8759a00ea.gif)
 <a href="https://seohee-choi.github.io/LifeOn42/">지금 바로 해보세요!</a>
 
 
