@@ -15,6 +15,7 @@ header {
   width: 100%;
   height: 10px;
   margin-top:3%;
+  margin-bottom:3%;
   flex-shrink: 0;
 
 }
@@ -36,19 +37,6 @@ header {
   color:rgb(32, 32, 32);
 }
 
-.question {
-  width: 95%;
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  word-break: keep-all;
-  font-size: 30px ;
-  font-family: 'Black Han Sans', sans-serif;
-  line-height: 33px;
-  text-align: center;
-}
-
 .responses {
   width: 90%;
   max-width: 500px;
@@ -63,6 +51,19 @@ header {
   word-break: keep-all;
   -webkit-tap-highlight-color: transparent;
   font-family: 'Nanum Gothic', sans-serif;
+}
+
+.question {
+  width: 95%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  word-break: keep-all;
+  font-size: 30px ;
+  font-family: 'Black Han Sans', sans-serif;
+  line-height: 33px;
+  text-align: center;
 }
 
 .choose {
@@ -87,14 +88,6 @@ header {
 
 .clicked {
   background:  #ffe876;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 13%;
-  margin-bottom: 10px;
 }
 
 .nextBtn {

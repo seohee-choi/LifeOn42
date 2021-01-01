@@ -88,13 +88,14 @@ function handleNext(event) {
     if (chooseBox[i].classList[1] === "clicked") {
       chooseBox[i].classList.remove("clicked");
       userVal.push(i);
-      if (userVal.length !== 1 && userVal.length <= qnaList.length) {
-        resultVal += parseInt(aArr[userVal.length - 1].answer[i].score);
-        console.log(resultVal); 
+      const currLen = userVal.length;
+      if (currLen !== 1 && currLen <= qnaList.length) {
+        resultVal += parseInt(aArr[currLen - 1].answer[i].score);
       }
       break;
     }
   }
+  window.scrollTo(0,0);
   if (idx == (lstLen - 1)) {
     nextBtn.innerText = "제출하기";
   }
@@ -102,14 +103,10 @@ function handleNext(event) {
   handleQna(qArr, aArr);
 }
 
-function init() {
-  handleQna(qArr, aArr);
-  valAcc = Math.floor(Math.random() * ACCNUM + 1);
-  nextBtn.addEventListener("click", handleNext);
-}
-
 //폰트, css 등 head에 있는 요소를 기다립니다.
 document.addEventListener("DOMContentLoaded", () => {
-    init();
+    handleQna(qArr, aArr);
+    valAcc = Math.floor(Math.random() * ACCNUM + 1);
+    nextBtn.addEventListener("click", handleNext);
   }
 );
