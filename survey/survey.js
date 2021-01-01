@@ -7,14 +7,13 @@ let userVal = [];
 let resultVal = 0;
 let idx = 0;
 let valAcc = 0;
+
 const ACCNUM = 13;
 
-var i = 0;
 function move(idx) {
   let elem = document.getElementById("status-bar");
   let width = Math.floor((100 / lstLen) * (idx));
   let maxWidth = Math.floor((100 / lstLen) * (idx + 1));
-
   let id = setInterval(frame, 20);
   function frame() {
     if (width >= maxWidth) {
@@ -31,16 +30,19 @@ const qArr = qnaList.map((node) => {
     question: node.q,
   };
 });
+
 const aArr = qnaList.map((node) => {
+  const answerArr = node.a.map((key) => {
+    return {
+      text: Object.keys(key),
+      score: Object.values(key)
+    }
+  });
   return {
-    answer: node.a,
+    answer: answerArr,
   };
 });
-const scoreArr = qnaList.map((node) => {
-  return {
-    result: node.score,
-  };
-});
+
 function paintQuestion(question) {
   const currQ = question.question;
   questionBox.innerText = currQ;
@@ -58,7 +60,7 @@ function selectVal(event) {
 function paintAnswer(answer) {
   const ansLen = answer.answer.length;
   for (let i = 0; i < ansLen; i++) {
-    chooseBox[i].innerText = answer.answer[i];
+    chooseBox[i].innerText = answer.answer[i].text;
     chooseBox[i].addEventListener("click", selectVal);
   }
 }
@@ -87,7 +89,8 @@ function handleNext(event) {
       chooseBox[i].classList.remove("clicked");
       userVal.push(i);
       if (userVal.length !== 1 && userVal.length <= qnaList.length) {
-        resultVal += parseInt(scoreArr[userVal.length - 1].result[i]);
+        resultVal += parseInt(aArr[userVal.length - 1].answer[i].score);
+        console.log(resultVal); 
       }
       break;
     }
@@ -105,9 +108,8 @@ function init() {
   nextBtn.addEventListener("click", handleNext);
 }
 
+//폰트, css 등 head에 있는 요소를 기다립니다.
 document.addEventListener("DOMContentLoaded", () => {
-  window.onload = () => {
     init();
-  };
-}
+  }
 );
