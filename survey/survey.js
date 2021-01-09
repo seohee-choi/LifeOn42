@@ -10,17 +10,17 @@ let valAcc = 0;
 
 const ACCNUM = 13;
 
-function move(idx) {
-  let elem = document.getElementById("status-bar");
-  let width = Math.floor((100 / lstLen) * (idx));
-  let maxWidth = Math.floor((100 / lstLen) * (idx + 1));
+function handleProgress(idx) {
+  const elem = document.getElementById("status-bar");
+  const nextWidth = Math.floor((100 / lstLen) * (idx + 1));
+  let currWidth = Math.floor((100 / lstLen) * (idx));
   let id = setInterval(frame, 20);
   function frame() {
-    if (width >= maxWidth) {
+    if (currWidth >= nextWidth) {
       clearInterval(id);
     } else {
-      width++;
-      elem.style.width = width + "%";
+      currWidth++;
+      elem.style.width = currWidth + "%";
     }
   }
 }
@@ -51,9 +51,8 @@ function paintQuestion(question) {
 function selectVal(event) {
   nextBtn.disabled = false;
   const chLen = chooseBox.length;
-  for (let i = 0; i < chLen; i++) {
+  for (let i = 0; i < chLen; i++)
     chooseBox[i].classList.remove("clicked");
-  }
   event.target.classList.add("clicked");
 }
 
@@ -77,7 +76,7 @@ function handleQna(qArr, aArr) {
   else {
     paintQuestion(qArr[idx]);
     paintAnswer(aArr[idx]);
-    move(idx);
+    handleProgress(idx);
     idx++;
   }
 }
