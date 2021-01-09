@@ -125,19 +125,19 @@ function drawCanvas(workCanvas) {
 }
 
 function calcResult(resultVal) {
-	if (resultVal < 7)
+	if (resultVal < 6)
 		return -1;
-	else if (resultVal >= 7 && resultVal < 12)
+	else if (resultVal >= 6 && resultVal < 10)
 		return 0;
-	else if (resultVal >= 12 && resultVal < 17)
+	else if (resultVal >= 10 && resultVal < 13)
 		return 1;
-	else if (resultVal >= 17 && resultVal < 22)
+	else if (resultVal >= 13 && resultVal < 17)
 		return 2;
-	else if (resultVal >= 21 && resultVal < 26)
+	else if (resultVal >= 17 && resultVal < 21)
 		return 3;
-	else if (resultVal >= 25 && resultVal < 29)
+	else if (resultVal >= 21 && resultVal < 25)
 		return 4;
-	else if (resultVal >= 29)
+	else if (resultVal >= 25)
 		return -1;
 }
 
@@ -151,7 +151,7 @@ function handleResult() {
 	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
-	subMain.innerText = `Lv.${resultVal % 7 + 1} ${exList[resultIdx].t}`;
+	subMain.innerText = `Lv.${resultVal % 6 + 1} ${exList[resultIdx].t}`;
 	subsub.innerText = `${exList[resultIdx].s}`;
 }
 
