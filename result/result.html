@@ -18,37 +18,33 @@
     로딩중..
     <div class="wave"></div>
   </div>
-  <div class="bodyDiv">
-    <section id="main">
-      <div class="result">
-        <div class="js-title title">당신의 LifeOn42는...</div>
+  <section>
+    <main class="result">
+        <span class="js-title title">당신의 LifeOn42는...</span>
         <div class="resultPic">
           <div class="character">
             <canvas id="jsCanvas" class="canvas"> </canvas>
           </div>
           <div class="character js-sub">
-            <div class="submain">
-            </div>
-            <div class="subsub">
-            </div>
+            <span class="submain"></span>
+            <span class="subsub"></span>
           </div>
         </div>
-      </div>
-    </section>
+    </main>
     <section id="middle">
       <div class="explain">
-        <div class="discription txt">
+        <span class="discription txt">
           재미있었다면 주변 사람에게 공유해주세요 💌
-        </div>
+        </span>
         <div class="Btns">
-          <button onclick="share()">
+          <button onclick="share()" class="exBtn">
             <i class="fas fa-share-alt">
-              <div class="exBtn">링크 공유</div>
+              <br>링크 공유
             </i>
           </button>
-          <button class="jsSave">
+          <button class="jsSave exBtn">
             <i class="fas fa-download">
-              <div class="exBtn">다운로드</div>
+             <br>다운로드
             </i>
           </button>
         </div>
@@ -61,9 +57,9 @@
         </div>
     </section>
     <section id="developers">
-      <div class="discription dev">
+      <span class="discription dev">
         개발자 소개
-      </div>
+      </span>
       <div class="discription">
         <div class="creater">
           <img src="profile/seohchoi.png">
@@ -87,7 +83,7 @@
         </div>
       </div>
     </section>
-    <section id="ifkakao">
+    <footer id="ifkakao">
       <h2>
         LifeOn42는 if(kakao)의 이벤트에서 영감을 받아 제작한 프로젝트로,<br>42 과정에서 시작해 인생의 목표를 위해 헤엄쳐나가는 우리 자신의 모습을 표현했습니다
       </h2>
@@ -101,9 +97,8 @@
         style="height:70px !important;width: 200px !important; background-color: rgb(72, 72, 72)"
         />
       </a>
-    </section>
-  </div>
-  </div>
+    </footer>
+  </section>
   <script src="../survey/data.js"></script>
   <script src="explain.js"></script>
   <script src="result.js"></script>
