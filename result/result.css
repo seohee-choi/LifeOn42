@@ -315,6 +315,7 @@ img:last-child {
   overflow: hidden;
   font-family: 'Black Han Sans', sans-serif;
   font-size: 5vw;
+  word-break: keep-all;
   color: #F5F5F7;
 }
 
