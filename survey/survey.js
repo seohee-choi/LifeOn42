@@ -1,4 +1,3 @@
-const questionBox = document.querySelector(".question");
 const chooseBox = document.querySelectorAll(".choose");
 const nextBtn = document.querySelector(".jsNext");
 const lstLen = qnaList.length;
@@ -44,6 +43,7 @@ const aArr = qnaList.map((node) => {
 });
 
 function paintQuestion(question) {
+  const questionBox = document.querySelector(".question");
   const currQ = question.question;
   questionBox.innerText = currQ;
 }

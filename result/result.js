@@ -1,9 +1,4 @@
-const bodyDiv = document.querySelector(".bodyDiv");
 const canvas = document.getElementById("jsCanvas");
-const userImg = document.querySelector(".character");
-const save = document.querySelector(".jsSave");
-const sub = document.querySelector(".js-sub");
-const Return = document.querySelector(".js-button");
 const url = "http://seohee-choi.github.io/LifeOn42";
 
 canvas.width = 500;
@@ -147,6 +142,7 @@ function getResultVal() {
 }
 
 function handleResult() {
+	const sub = document.querySelector(".js-sub");
 	const resultVal = getResultVal();
 	const resultIdx = calcResult(parseInt(resultVal));
 	const subMain = sub.querySelector(".submain");
@@ -160,6 +156,7 @@ function againTest() {
 }
 
 function init() {
+	const save = document.querySelector(".jsSave");
 	getUserName();
 	handleImage(drawCanvas);
 	handleResult();
@@ -170,12 +167,12 @@ function init() {
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (location.href.indexOf('#') == -1) {
+		const main = document.querySelector("section");
 		const loadingBox = document.querySelector(".loadingBox");
 		loadingBox.style.display = "";
-		bodyDiv.style.display = "none";
+		main.style.display = "none";
 	}
 	window.onload = () => {
 		init();
 	};
-}
-);
+});
