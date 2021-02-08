@@ -119,35 +119,35 @@ function drawCanvas(workCanvas) {
 		setTimeout(replaceFn, 2500);
 }
 
-function calcResult(resultVal) {
-	if (resultVal < 6)
+function calcResult(userScore) {
+	if (userScore < 6)
 		return -1;
-	else if (resultVal >= 6 && resultVal < 10)
+	else if (userScore >= 6 && userScore < 10)
 		return 0;
-	else if (resultVal >= 10 && resultVal < 13)
+	else if (userScore >= 10 && userScore < 13)
 		return 1;
-	else if (resultVal >= 13 && resultVal < 17)
+	else if (userScore >= 13 && userScore < 17)
 		return 2;
-	else if (resultVal >= 17 && resultVal < 21)
+	else if (userScore >= 17 && userScore < 21)
 		return 3;
-	else if (resultVal >= 21 && resultVal < 25)
+	else if (userScore >= 21 && userScore < 25)
 		return 4;
-	else if (resultVal >= 25)
+	else if (userScore >= 25)
 		return -1;
 }
 
-function getResultVal() {
-	const resultVal = localStorage.getItem("valNum");
-	return resultVal;
+function getuserScore() {
+	const userScore = localStorage.getItem("valNum");
+	return userScore;
 }
 
 function handleResult() {
 	const sub = document.querySelector(".js-sub");
-	const resultVal = getResultVal();
-	const resultIdx = calcResult(parseInt(resultVal));
+	const userScore = getuserScore();
+	const resultIdx = calcResult(parseInt(userScore));
 	const subMain = sub.querySelector(".submain");
 	const subsub = sub.querySelector(".subsub");
-	subMain.innerText = `Lv.${resultVal % 6 + 1} ${exList[resultIdx].t}`;
+	subMain.innerText = `Lv.${userScore % 6 + 1} ${exList[resultIdx].t}`;
 	subsub.innerText = `${exList[resultIdx].s}`;
 }
 

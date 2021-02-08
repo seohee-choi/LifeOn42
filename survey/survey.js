@@ -3,7 +3,7 @@ const nextBtn = document.querySelector(".jsNext");
 const lstLen = qnaList.length;
 
 let userVal = [];
-let resultVal = 0;
+let userScore = 0;
 let idx = 0;
 let valAcc = 0;
 
@@ -66,7 +66,7 @@ function paintAnswer(answer) {
 
 function endQna() {
   localStorage.setItem("valList", JSON.stringify(userVal));
-  localStorage.setItem("valNum", resultVal);
+  localStorage.setItem("valNum", userScore);
   localStorage.setItem("valAcc", valAcc);
   location.href = `../result/result.html`;
 }
@@ -81,31 +81,42 @@ function handleQna(qArr, aArr) {
   }
 }
 
+function goToNextPage() {
+	window.scrollTo(0,0);
+	if (idx == (lstLen - 1)) {
+		nextBtn.innerText = "제출하기";
+	}
+	nextBtn.disabled = true;
+	handleQna(qArr, aArr);
+}
+
+function addUserScore(i) {
+	const currLen = userVal.length;
+	if (currLen !== 1 && currLen <= qnaList.length) {
+		userScore += parseInt(aArr[currLen - 1].answer[i].score);
+	}
+}
+
 function handleNext(event) {
   event.preventDefault();
   for (let i = 0; i < chooseBox.length; i++) {
     if (chooseBox[i].classList[1] === "clicked") {
-      chooseBox[i].classList.remove("clicked");
-      userVal.push(i);
-      const currLen = userVal.length;
-      if (currLen !== 1 && currLen <= qnaList.length) {
-        resultVal += parseInt(aArr[currLen - 1].answer[i].score);
-      }
-      break;
+		chooseBox[i].classList.remove("clicked");
+		userVal.push(i);
+		addUserScore(i);
+		goToNextPage();
+      	break;
     }
   }
-  window.scrollTo(0,0);
-  if (idx == (lstLen - 1)) {
-    nextBtn.innerText = "제출하기";
-  }
-  nextBtn.disabled = true;
-  handleQna(qArr, aArr);
+  
 }
 
 //폰트, css 등 head에 있는 요소를 기다립니다.
+//혹은 HTML에 있는 요소들이 지연되어서 로딩되는 경우를 기다리기 위해...
 document.addEventListener("DOMContentLoaded", () => {
     handleQna(qArr, aArr);
     valAcc = Math.floor(Math.random() * ACCNUM + 1);
     nextBtn.addEventListener("click", handleNext);
   }
 );
+ 
