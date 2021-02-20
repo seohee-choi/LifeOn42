@@ -80,16 +80,12 @@ function drawImg(){
 	const imgURLs = getImageURL();
 
 	let imagesOk = 0;
-	console.log(imgURLs);
-
 	for (let i = 0; i < imgURLs.length; i++) {
 		let image = new Image();
 		image.src = imgURLs[i];
-		console.log(image.src);
 		image.onload = function () {
 			context.drawImage(image, 0, 0);
 			imagesOk++;
-			console.log(imagesOk);
 			if (imagesOk == imgURLs.length) {
 				drawCanvas();
 			}
@@ -97,19 +93,17 @@ function drawImg(){
 	}
 }
 
-function drawImportantImg(callback){
+function drawImportantImg(callback, idx){
 	const importantImgURLs = getImportantImgURL();
-	let imagesOk = 0;
 
-	for (let i = 0; i < importantImgURLs.length; i++) {
-		let image = new Image();
-		image.src = importantImgURLs[i];
-		image.onload = function () {
-			context.drawImage(image, 0, 0);
-			imagesOk++;
-			if (imagesOk == importantImgURLs.length)
-				callback();
-		}
+	let image = new Image();
+	image.src = importantImgURLs[idx];
+	image.onload = () => {
+		context.drawImage(image, 0, 0);
+		if (idx == importantImgURLs.length - 1)
+			callback();
+		else 
+			drawImportantImg(callback, idx + 1);
 	}
 }
 
@@ -156,7 +150,7 @@ function againTest() {
 function init() {
 	const save = document.querySelector(".jsSave");
 	getUserName();
-	drawImportantImg(drawImg);
+	drawImportantImg(drawImg, 0);
 	handleResult();
 	if (save) {
 		save.addEventListener("click", saveImg);
