@@ -3,6 +3,8 @@ const url = "http://seohee-choi.github.io/LifeOn42";
 
 canvas.width = 500;
 canvas.height = 500;
+const context = canvas.getContext('2d');
+
 
 function share() {
 	if (navigator.share) {
@@ -50,66 +52,63 @@ function getUserVal() {
 }
 
 function getImageURL() {
-	const userVal = getUserVal();
+	let userVal = getUserVal();
 	const imageURLs = [];
-	imageURLs.push(`../pic/default2.png`);
+	userVal = userVal.slice(1, userVal.length - 1);
 
 	let i = 0;
 	userVal.forEach(function (element) {
-		imageURLs.push(`../pic/${i}/${element}.png`);
+			imageURLs.push(`../pic/${i}/${element}.png`);
 		i++;
 	});
 	return imageURLs;
 }
 
-function handleImage(callback) {
+function getImportantImgURL(){
+	const userVal = getUserVal();
+	const importantImgURLs = [];
+	const accNbr = getAccNbr();
+
+	importantImgURLs.push(`../pic/bgi/${userVal[6]}.png`);
+	importantImgURLs.push(`../pic/default2.png`);
+	importantImgURLs.push(`../pic/guild/${userVal[0]}.png`);
+	importantImgURLs.push(`../pic/accessory/${accNbr}.png`);
+	return importantImgURLs;
+}
+
+function drawImg(){
 	const imgURLs = getImageURL();
-	const context = canvas.getContext('2d');
-	//이미지 요소들을 일시에 뿌려주기 위해서 두 개의 캔버스 사용했습니다. - 를 왠지 안해도 될 것 같아서
-	//현재는 한개의 캔버스에만 출력하고있습니다.
-	//const workCanvas = document.createElement("canvas");
-	//const workContext = workCanvas.getContext('2d');
-	//workCanvas.width = 500;
-	//workCanvas.height = 500;
 
-	//리팩토링 대상
-	//수정은 한번만 클래스
 	let imagesOk = 0;
-	const bgimg = new Image();
-	bgimg.src = imgURLs[imgURLs.length - 1];
-	bgimg.onload = () => {
-		context.drawImage(bgimg, 0, 0);
+	console.log(imgURLs);
 
-		//반복되는 패턴이 많이 보이는데 재귀?
-		//재귀해서 콜백함수 부르거나...
-		let defaultimage = new Image();
-		defaultimage.src = imgURLs[0];
-		defaultimage.onload = () => {
-			context.drawImage(defaultimage, 0, 0);
-
-			let guildImg = new Image();
-			guildImg.src = imgURLs[1];
-			guildImg.onload = () => {
-				context.drawImage(guildImg, 0, 0);
-
-				const accNbr = getAccNbr();
-				let image = new Image();
-				image.src = `../pic/accessory/${accNbr}.png`;
-				image.onload = () => {
-					context.drawImage(image, 0, 0);
-					for (let i = 2; i < imgURLs.length - 1; i++) {
-						let image = new Image();
-						image.src = imgURLs[i];
-						image.onload = function () {
-							context.drawImage(image, 0, 0);
-							imagesOk++;
-							if (imagesOk >= imgURLs.length - 3) {
-								callback();
-							}
-						}
-					}
-				}
+	for (let i = 0; i < imgURLs.length; i++) {
+		let image = new Image();
+		image.src = imgURLs[i];
+		console.log(image.src);
+		image.onload = function () {
+			context.drawImage(image, 0, 0);
+			imagesOk++;
+			console.log(imagesOk);
+			if (imagesOk == imgURLs.length) {
+				drawCanvas();
 			}
+		}
+	}
+}
+
+function drawImportantImg(callback){
+	const importantImgURLs = getImportantImgURL();
+	let imagesOk = 0;
+
+	for (let i = 0; i < importantImgURLs.length; i++) {
+		let image = new Image();
+		image.src = importantImgURLs[i];
+		image.onload = function () {
+			context.drawImage(image, 0, 0);
+			imagesOk++;
+			if (imagesOk == importantImgURLs.length)
+				callback();
 		}
 	}
 }
@@ -119,7 +118,6 @@ function replaceFn() {
 }
 
 function drawCanvas() {
-	//context.drawImage(workCanvas, 0, 0);
 	if (location.href.indexOf('#') == -1)
 		setTimeout(replaceFn, 2500);
 }
@@ -158,7 +156,7 @@ function againTest() {
 function init() {
 	const save = document.querySelector(".jsSave");
 	getUserName();
-	handleImage(drawCanvas);
+	drawImportantImg(drawImg);
 	handleResult();
 	if (save) {
 		save.addEventListener("click", saveImg);

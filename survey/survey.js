@@ -101,14 +101,13 @@ function handleNext(event) {
   event.preventDefault();
   for (let i = 0; i < chooseBox.length; i++) {
     if (chooseBox[i].classList[1] === "clicked") {
-		chooseBox[i].classList.remove("clicked");
-		userVal.push(i);
-		addUserScore(i);
-		goToNextPage();
-      	break;
+      chooseBox[i].classList.remove("clicked");
+      userVal.push(i);
+      addUserScore(i);
+      goToNextPage();
+      break;
     }
   }
-  
 }
 
 //폰트, css 등 head에 있는 요소를 기다립니다.
