@@ -64,41 +64,47 @@ function getImageURL() {
 
 function handleImage(callback) {
 	const imgURLs = getImageURL();
-	//이미지 요소들을 일시에 뿌려주기 위해서 두 개의 캔버스 사용했습니다.
-	const workCanvas = document.createElement("canvas");
-	const workContext = workCanvas.getContext('2d');
-	workCanvas.width = 500;
-	workCanvas.height = 500;
+	const context = canvas.getContext('2d');
+	//이미지 요소들을 일시에 뿌려주기 위해서 두 개의 캔버스 사용했습니다. - 를 왠지 안해도 될 것 같아서
+	//현재는 한개의 캔버스에만 출력하고있습니다.
+	//const workCanvas = document.createElement("canvas");
+	//const workContext = workCanvas.getContext('2d');
+	//workCanvas.width = 500;
+	//workCanvas.height = 500;
 
+	//리팩토링 대상
+	//수정은 한번만 클래스
 	let imagesOk = 0;
 	const bgimg = new Image();
 	bgimg.src = imgURLs[imgURLs.length - 1];
-	bgimg.onload = function () {
-		workContext.drawImage(bgimg, 0, 0);
+	bgimg.onload = () => {
+		context.drawImage(bgimg, 0, 0);
 
+		//반복되는 패턴이 많이 보이는데 재귀?
+		//재귀해서 콜백함수 부르거나...
 		let defaultimage = new Image();
 		defaultimage.src = imgURLs[0];
 		defaultimage.onload = () => {
-			workContext.drawImage(defaultimage, 0, 0);
+			context.drawImage(defaultimage, 0, 0);
 
 			let guildImg = new Image();
 			guildImg.src = imgURLs[1];
 			guildImg.onload = () => {
-				workContext.drawImage(guildImg, 0, 0);
+				context.drawImage(guildImg, 0, 0);
 
 				const accNbr = getAccNbr();
 				let image = new Image();
 				image.src = `../pic/accessory/${accNbr}.png`;
 				image.onload = () => {
-					workContext.drawImage(image, 0, 0);
+					context.drawImage(image, 0, 0);
 					for (let i = 2; i < imgURLs.length - 1; i++) {
 						let image = new Image();
 						image.src = imgURLs[i];
 						image.onload = function () {
-							workContext.drawImage(image, 0, 0);
+							context.drawImage(image, 0, 0);
 							imagesOk++;
 							if (imagesOk >= imgURLs.length - 3) {
-								callback(workCanvas);
+								callback();
 							}
 						}
 					}
@@ -112,33 +118,27 @@ function replaceFn() {
 	location.replace(location.href + '?#');
 }
 
-function drawCanvas(workCanvas) {
-	const context = canvas.getContext('2d');
-	context.drawImage(workCanvas, 0, 0);
+function drawCanvas() {
+	//context.drawImage(workCanvas, 0, 0);
 	if (location.href.indexOf('#') == -1)
 		setTimeout(replaceFn, 2500);
 }
 
 function calcResult(userScore) {
-	if (userScore < 6)
-		return -1;
-	else if (userScore >= 6 && userScore < 10)
-		return 0;
-	else if (userScore >= 10 && userScore < 13)
-		return 1;
-	else if (userScore >= 13 && userScore < 17)
-		return 2;
-	else if (userScore >= 17 && userScore < 21)
-		return 3;
-	else if (userScore >= 21 && userScore < 25)
-		return 4;
-	else if (userScore >= 25)
-		return -1;
+	const resScore = Math.floor((userScore - 5)/4);
+	if (userScore < 6 || userScore >= 25)
+		unexpectedVal();
+	else return (resScore);
 }
 
 function getuserScore() {
 	const userScore = localStorage.getItem("valNum");
 	return userScore;
+}
+
+function unexpectedVal() {
+	alert("유효하지 않은 값입니다.");
+	againTest();
 }
 
 function handleResult() {
