@@ -5,6 +5,7 @@ canvas.width = 500;
 canvas.height = 500;
 const context = canvas.getContext('2d');
 
+let userVal;
 
 function share() {
 	if (navigator.share) {
@@ -43,16 +44,9 @@ function getAccNbr() {
 	return accNbr
 }
 
-function getUserVal() {
-	const lstLen = qnaList.length;
-	let userVal = JSON.parse(localStorage.getItem("valList"));
-	if (userVal.length > lstLen)
-		userVal = userVal.slice(0, lstLen);
-	return userVal;
-}
 
-function getImageURL() {
-	let userVal = getUserVal();
+
+function getCommonImage() {
 	const imageURLs = [];
 	userVal = userVal.slice(1, userVal.length - 1);
 
@@ -65,7 +59,6 @@ function getImageURL() {
 }
 
 function getImportantImgURL(){
-	const userVal = getUserVal();
 	const importantImgURLs = [];
 	const accNbr = getAccNbr();
 
@@ -76,8 +69,8 @@ function getImportantImgURL(){
 	return importantImgURLs;
 }
 
-function drawImg(){
-	const imgURLs = getImageURL();
+function drawCommonImg(){
+	const imgURLs = getCommonImage();
 
 	let imagesOk = 0;
 	for (let i = 0; i < imgURLs.length; i++) {
@@ -147,10 +140,23 @@ function againTest() {
 	location.href = url;
 }
 
+function getUserVal() {
+	const lstLen = qnaList.length;
+	let userVal = JSON.parse(localStorage.getItem("valList"));
+	if (userVal.length > lstLen)
+		userVal = userVal.slice(0, lstLen);
+	userVal.forEach(function (element) {
+		if (element < 0 || element > 3)
+			unexpectedVal();
+	});
+	return userVal;
+}
+
 function init() {
 	const save = document.querySelector(".jsSave");
+	userVal = getUserVal()
 	getUserName();
-	drawImportantImg(drawImg, 0);
+	drawImportantImg(drawCommonImg, 0);
 	handleResult();
 	if (save) {
 		save.addEventListener("click", saveImg);
