@@ -91,9 +91,9 @@ function goToNextPage() {
 }
 
 function addUserScore(i) {
-	const currLen = userVal.length;
+  const currLen = userVal.length;
 	if (currLen !== 1 && currLen <= qnaList.length) {
-		userScore += parseInt(aArr[currLen - 1].answer[i].score);
+		  userScore += parseInt(aArr[currLen - 1].answer[i].score);
 	}
 }
 
